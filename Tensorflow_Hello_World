@@ -1,0 +1,640 @@
+{
+  "paragraphs": [
+    {
+      "title": "",
+      "text": "%md\n### Getting Started\nThis guide gets you started programming in TensorFlow. Before using this guide, install TensorFlow. To get the most out of this guide, you should know the following:\n* **How to program in Python**\n* **At least a little bit about arrays.**\n*  **Ideally, something about machine learning.**\n\nHowever, if you know little or nothing about machine learning, then this is still the first guide you should read.\n* TensorFlow provides multiple APIs. \n The lowest level API--TensorFlow Core-- provides you with complete programming control. We recommend TensorFlow Core for machine learning researchers and others who require fine levels of control over their models. \n\n* The higher level APIs are built on top of TensorFlow Core. These higher level APIs are typically easier to learn and use than TensorFlow Core. In addition, the higher level APIs make repetitive tasks easier and more consistent between different users. A high-level API like tf.contrib.learn helps you manage data sets, estimators, training and inference. \n** Note that a few of the high-level TensorFlow APIs--those whose method names contain contrib-- are still in development. It is possible that some contrib methods will change or become obsolete in subsequent TensorFlow releases.\n\nThis guide begins with a tutorial on **TensorFlow Core**. Later, we demonstrate how to implement the same model in **tf.contrib.learn**. Knowing TensorFlow Core principles will give you a great mental model of how things are working internally when you use the more compact higher level API.\n\u003cbr/\u003e\n",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 18, 2017 11:11:35 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "lineNumbers": false,
+        "title": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495145527908_1303449571",
+      "id": "20170518-221207_1712404739",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eGetting Started\u003c/h3\u003e\n\u003cp\u003eThis guide gets you started programming in TensorFlow. Before using this guide, install TensorFlow. To get the most out of this guide, you should know the following:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003eHow to program in Python\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eAt least a little bit about arrays.\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eIdeally, something about machine learning.\u003c/strong\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eHowever, if you know little or nothing about machine learning, then this is still the first guide you should read.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cp\u003eTensorFlow provides multiple APIs.\n\u003cbr  /\u003eThe lowest level API\u0026ndash;TensorFlow Core\u0026ndash; provides you with complete programming control. We recommend TensorFlow Core for machine learning researchers and others who require fine levels of control over their models.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eThe higher level APIs are built on top of TensorFlow Core. These higher level APIs are typically easier to learn and use than TensorFlow Core. In addition, the higher level APIs make repetitive tasks easier and more consistent between different users. A high-level API like tf.contrib.learn helps you manage data sets, estimators, training and inference.\n\u003cbr  /\u003e** Note that a few of the high-level TensorFlow APIs\u0026ndash;those whose method names contain contrib\u0026ndash; are still in development. It is possible that some contrib methods will change or become obsolete in subsequent TensorFlow releases.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eThis guide begins with a tutorial on \u003cstrong\u003eTensorFlow Core\u003c/strong\u003e. Later, we demonstrate how to implement the same model in \u003cstrong\u003etf.contrib.learn\u003c/strong\u003e. Knowing TensorFlow Core principles will give you a great mental model of how things are working internally when you use the more compact higher level API.\n\u003cbr  /\u003e\u003cbr /\u003e\u003c/p\u003e\n"
+      },
+      "dateCreated": "May 18, 2017 10:12:07 PM",
+      "dateStarted": "May 18, 2017 10:55:46 PM",
+      "dateFinished": "May 18, 2017 10:55:46 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Tensors\nThe central unit of data in TensorFlow is the tensor.\nA tensor consists of a set of primitive values shaped into an array of any number of dimensions. A tensor\u0027s \u003cstrong\u003e\u003cem\u003erank\u003c/em\u003e\u003c/strong\u003e is its \u003cstrong\u003enumber of dimensions\u003c/strong\u003e. Here are some examples of tensors:\n\n\n    3                                   # a **rank 0 tensor**; this is a scalar with shape []\n    [1. ,2., 3.]                        # a **rank 1 tensor**; this is a vector with shape [3]\n    [[1., 2., 3.], [4., 5., 6.]]        # a **rank 2 tensor**; a matrix with shape [2, 3]\n    [[[1., 2., 3.]], [[7., 8., 9.]]]    # a **rank 3 tensor** with shape [2, 1, 3]\n\n",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 18, 2017 11:20:54 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495146968152_1877915785",
+      "id": "20170518-223608_973635180",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eTensors\u003c/h3\u003e\n\u003cp\u003eThe central unit of data in TensorFlow is the tensor.\n\u003cbr  /\u003eA tensor consists of a set of primitive values shaped into an array of any number of dimensions. A tensor\u0027s \u003cstrong\u003e\u003cem\u003erank\u003c/em\u003e\u003c/strong\u003e is its \u003cstrong\u003enumber of dimensions\u003c/strong\u003e. Here are some examples of tensors:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e3                                   # a **rank 0 tensor**; this is a scalar with shape []\n[1. ,2., 3.]                        # a **rank 1 tensor**; this is a vector with shape [3]\n[[1., 2., 3.], [4., 5., 6.]]        # a **rank 2 tensor**; a matrix with shape [2, 3]\n[[[1., 2., 3.]], [[7., 8., 9.]]]    # a **rank 3 tensor** with shape [2, 1, 3]\n\u003c/code\u003e\u003c/pre\u003e\n"
+      },
+      "dateCreated": "May 18, 2017 10:36:08 PM",
+      "dateStarted": "May 18, 2017 11:09:14 PM",
+      "dateFinished": "May 18, 2017 11:09:14 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md \n#### TensorFlow Core tutorial\nThe canonical import statement for TensorFlow programs is as follow.\n\n    import tensorflow as tf\n\nThis gives Python access to all of TensorFlow\u0027s classes, methods, and symbols.\n\n",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 18, 2017 11:09:51 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495146970984_-1746049430",
+      "id": "20170518-223610_205943925",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch4\u003eTensorFlow Core tutorial\u003c/h4\u003e\n\u003cp\u003eThe canonical import statement for TensorFlow programs is as follow.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eimport tensorflow as tf\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eThis gives Python access to all of TensorFlow\u0027s classes, methods, and symbols.\u003c/p\u003e\n"
+      },
+      "dateCreated": "May 18, 2017 10:36:10 PM",
+      "dateStarted": "May 18, 2017 11:08:48 PM",
+      "dateFinished": "May 18, 2017 11:08:48 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n#### The Computational Graph\n\nYou might think of TensorFlow Core programs as consisting of two discrete sections:\n\n* Building the computational graph.\n* Running the computational graph.\n\nA computational graph is a series of TensorFlow operations arranged into a graph of nodes. Let\u0027s build a simple computational graph. Each node takes zero or more tensors as inputs and produces a tensor as an output. One type of node is a constant. Like all TensorFlow constants, it takes no inputs, and it outputs a value it stores internally. We can create two floating point Tensors node1 and node2 as follows:\n\n    node1 \u003d tf.constant(3.0, tf.float32)\n    node2 \u003d tf.constant(4.0) # also tf.float32 implicitly\n    print(node1, node2)\n\nIn the next section we will execute the first example of code. We will print the **node1** and **node2**.\n\n\u003cb/\u003e",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 18, 2017 11:14:31 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495146971815_1699407619",
+      "id": "20170518-223611_2113272025",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch4\u003eThe Computational Graph\u003c/h4\u003e\n\u003cp\u003eYou might think of TensorFlow Core programs as consisting of two discrete sections:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eBuilding the computational graph.\u003c/li\u003e\n\u003cli\u003eRunning the computational graph.\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eA computational graph is a series of TensorFlow operations arranged into a graph of nodes. Let\u0027s build a simple computational graph. Each node takes zero or more tensors as inputs and produces a tensor as an output. One type of node is a constant. Like all TensorFlow constants, it takes no inputs, and it outputs a value it stores internally. We can create two floating point Tensors node1 and node2 as follows:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003enode1 \u003d tf.constant(3.0, tf.float32)\nnode2 \u003d tf.constant(4.0) # also tf.float32 implicitly\nprint(node1, node2)\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eIn the next section we will execute the first example of code. We will print the \u003cstrong\u003enode1\u003c/strong\u003e and \u003cstrong\u003enode2\u003c/strong\u003e.\u003c/p\u003e\n\u003cp\u003e\u003cb /\u003e\u003c/p\u003e\n"
+      },
+      "dateCreated": "May 18, 2017 10:36:11 PM",
+      "dateStarted": "May 18, 2017 11:14:26 PM",
+      "dateFinished": "May 18, 2017 11:14:26 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nimport tensorflow as tf\n\nnode1 \u003d tf.constant(3.0, tf.float32)\nnode2 \u003d tf.constant(4.0) # also tf.float32 implicitly\nprint(node1, node2)",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 19, 2017 12:53:07 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495146975384_-806092542",
+      "id": "20170518-223615_1416631844",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "(\u003ctf.Tensor \u0027Const:0\u0027 shape\u003d() dtype\u003dfloat32\u003e, \u003ctf.Tensor \u0027Const_1:0\u0027 shape\u003d() dtype\u003dfloat32\u003e)\n"
+      },
+      "dateCreated": "May 18, 2017 10:36:15 PM",
+      "dateStarted": "May 19, 2017 12:53:07 AM",
+      "dateFinished": "May 19, 2017 12:53:09 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\nNotice that printing the nodes does not output the values **3.0 and 4.0** as you might expect. \n\nInstead, they are nodes that, when evaluated, would produce **3.0** and **4.0**, respectively.\n\n**To actually evaluate the nodes, we must run the computational graph within a session. A session encapsulates the control and state of the TensorFlow runtime.**\n\n**In the next section we will actually create a session and execute the graph.**\n",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 18, 2017 11:18:45 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorHide": true,
+        "editorMode": "ace/mode/markdown"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495146077965_896939073",
+      "id": "20170518-222117_11608724",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003cp\u003eNotice that printing the nodes does not output the values \u003cstrong\u003e3.0 and 4.0\u003c/strong\u003e as you might expect.\u003c/p\u003e\n\u003cp\u003eInstead, they are nodes that, when evaluated, would produce \u003cstrong\u003e3.0\u003c/strong\u003e and \u003cstrong\u003e4.0\u003c/strong\u003e, respectively.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eTo actually evaluate the nodes, we must run the computational graph within a session. A session encapsulates the control and state of the TensorFlow runtime.\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eIn the next section we will actually create a session and execute the graph.\u003c/strong\u003e\u003c/p\u003e\n"
+      },
+      "dateCreated": "May 18, 2017 10:21:17 PM",
+      "dateStarted": "May 18, 2017 11:18:42 PM",
+      "dateFinished": "May 18, 2017 11:18:42 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n\nsess \u003d tf.Session()",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 18, 2017 11:19:08 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495149324988_-151479254",
+      "id": "20170518-231524_181197994",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "2017-05-18 23:19:08.967611: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn\u0027t compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.\n2017-05-18 23:19:08.967642: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn\u0027t compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.\n2017-05-18 23:19:08.967654: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn\u0027t compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.\n"
+      },
+      "dateCreated": "May 18, 2017 11:15:24 PM",
+      "dateStarted": "May 18, 2017 11:19:08 PM",
+      "dateFinished": "May 18, 2017 11:19:08 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\nBelow code:\n    \n    sess \u003d tf.Session()\n\nCreates a Session Object to be able to run on the CPU or GPU. If you are running of the GPU you should see a bunch of print statements related to this. Later we will cover how the CPU and the GPU sections are split.",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 18, 2017 11:25:01 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495149548940_-1986207196",
+      "id": "20170518-231908_1199179499",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003cp\u003eBelow code:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003esess \u003d tf.Session()\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eCreates a Session Object to be able to run on the CPU or GPU. If you are running of the GPU you should see a bunch of print statements related to this. Later we will cover how the CPU and the GPU sections are split.\u003c/p\u003e\n"
+      },
+      "dateCreated": "May 18, 2017 11:19:08 PM",
+      "dateStarted": "May 18, 2017 11:21:09 PM",
+      "dateFinished": "May 18, 2017 11:21:09 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\nOnce we have the session object we can go ahead and use it to execute a graph. In the example below we are going to use it to print the two constants that **a and b**.",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 18, 2017 11:26:57 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495149638524_1149401106",
+      "id": "20170518-232038_1289039194",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003cp\u003eOnce we have the session object we can go ahead and use it to execute a graph. In the example below we are going to use it to print the two constants that \u003cstrong\u003ea and b\u003c/strong\u003e.\u003c/p\u003e\n"
+      },
+      "dateCreated": "May 18, 2017 11:20:38 PM",
+      "dateStarted": "May 18, 2017 11:26:53 PM",
+      "dateFinished": "May 18, 2017 11:26:53 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nprint(sess.run([node1, node2]))",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 18, 2017 11:27:43 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495150013708_-404258757",
+      "id": "20170518-232653_825780672",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "[3.0, 4.0]\n"
+      },
+      "dateCreated": "May 18, 2017 11:26:53 PM",
+      "dateStarted": "May 18, 2017 11:27:43 PM",
+      "dateFinished": "May 18, 2017 11:27:43 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\nNext we modify the graph with an **add operation**\n    node3 \u003d tf.add(node1, node2)\n\n\n",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 18, 2017 11:30:19 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495150023667_1747272416",
+      "id": "20170518-232703_661990835",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003cp\u003eNext we modify the graph with an \u003cstrong\u003eadd operation\u003c/strong\u003e\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003enode3 \u003d tf.add(node1, node2)\n\u003c/code\u003e\u003c/pre\u003e\n"
+      },
+      "dateCreated": "May 18, 2017 11:27:03 PM",
+      "dateStarted": "May 18, 2017 11:30:16 PM",
+      "dateFinished": "May 18, 2017 11:30:16 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n\nnode3 \u003d tf.add(node1, node2)\nprint (sess.run([node3]))",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 18, 2017 11:30:46 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495150216158_-1341047353",
+      "id": "20170518-233016_847290691",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "[7.0]\n"
+      },
+      "dateCreated": "May 18, 2017 11:30:16 PM",
+      "dateStarted": "May 18, 2017 11:30:46 PM",
+      "dateFinished": "May 18, 2017 11:30:46 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\nBelow is a visualization of the graph.\n![Tensorboard](https://www.tensorflow.org/images/getting_started_add.png)",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 18, 2017 11:34:21 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495150246854_-955682196",
+      "id": "20170518-233046_1053975710",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003cp\u003eBelow is a visualization of the graph.\n\u003cbr  /\u003e\u003cimg src\u003d\"https://www.tensorflow.org/images/getting_started_add.png\" alt\u003d\"Tensorboard\" /\u003e\u003c/p\u003e\n"
+      },
+      "dateCreated": "May 18, 2017 11:30:46 PM",
+      "dateStarted": "May 18, 2017 11:34:20 PM",
+      "dateFinished": "May 18, 2017 11:34:20 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n### Parameterized Graph\nNext we will sess how to pass parameters to a graph. \nA graph can be parameterized to accept external inputs, known as *placeholders*. A *placeholder* is a promise to provide a value later.\n\n    a \u003d tf.placeholder(tf.float32)\n    b \u003d tf.placeholder(tf.float32)\n    adder_node \u003d tf.add(a, b)\n\nNext once we create a session \n    sess \u003d tf.Session()\n\nWe can evaluate this graph with multiple inputs by using the **feed_dict** parameter to specify **Tensors** that provide concrete values to these placeholders\n\n    print(sess.run(adder_node, {a: 3, b:4.5}))\n    print(sess.run(adder_node, {a: [1,3], b: [2, 4]}))\n\nprinting\n\n    7.5\n    [ 3.  7.]\n\n",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 18, 2017 11:45:49 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495150327563_-432869738",
+      "id": "20170518-233207_1929694856",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eParameterized Graph\u003c/h3\u003e\n\u003cp\u003eNext we will sess how to pass parameters to a graph.\n\u003cbr  /\u003eA graph can be parameterized to accept external inputs, known as \u003cem\u003eplaceholders\u003c/em\u003e. A \u003cem\u003eplaceholder\u003c/em\u003e is a promise to provide a value later.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003ea \u003d tf.placeholder(tf.float32)\nb \u003d tf.placeholder(tf.float32)\nadder_node \u003d tf.add(a, b)\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eNext once we create a session\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003esess \u003d tf.Session()\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eWe can evaluate this graph with multiple inputs by using the \u003cstrong\u003efeed_dict\u003c/strong\u003e parameter to specify \u003cstrong\u003eTensors\u003c/strong\u003e that provide concrete values to these placeholders\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eprint(sess.run(adder_node, {a: 3, b:4.5}))\nprint(sess.run(adder_node, {a: [1,3], b: [2, 4]}))\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eprinting\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e7.5\n[ 3.  7.]\n\u003c/code\u003e\u003c/pre\u003e\n"
+      },
+      "dateCreated": "May 18, 2017 11:32:07 PM",
+      "dateStarted": "May 18, 2017 11:45:38 PM",
+      "dateFinished": "May 18, 2017 11:45:38 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n\n# This is actual code execution\n# Below we define two placeholders\na \u003d tf.placeholder(tf.float32)\nb \u003d tf.placeholder(tf.float32)\nadder_node \u003d tf.add(a,b)\n\n#Create a session\nsess \u003d tf.Session()\n\n#Execute the sessions\n\nprint(sess.run(adder_node, {a: 3, b:4.5}))\nprint(sess.run(adder_node, {a: [1,3], b: [2, 4]}))\n",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 18, 2017 11:48:13 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495151138101_679985545",
+      "id": "20170518-234538_1554718086",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "7.5\n[ 3.  7.]\n"
+      },
+      "dateCreated": "May 18, 2017 11:45:38 PM",
+      "dateStarted": "May 18, 2017 11:47:54 PM",
+      "dateFinished": "May 18, 2017 11:47:54 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\nThe output graph looks like the following:\n\n![adder_node](https://www.tensorflow.org/images/getting_started_adder.png)",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 18, 2017 11:50:16 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495151163084_-1418637459",
+      "id": "20170518-234603_2026808370",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003cp\u003eThe output graph looks like the following:\u003c/p\u003e\n\u003cp\u003e\u003cimg src\u003d\"https://www.tensorflow.org/images/getting_started_adder.png\" alt\u003d\"adder_node\" /\u003e\u003c/p\u003e\n"
+      },
+      "dateCreated": "May 18, 2017 11:46:03 PM",
+      "dateStarted": "May 18, 2017 11:50:14 PM",
+      "dateFinished": "May 18, 2017 11:50:14 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\nIn the above turorial you have stepped through the following\n\n* Explained how to create a Tensorflow graph\n* Create a Tensorflow Constant\n* Create a Session\n* Create Graph\n* Execute a Graph\n\nIn the later examples you will be delve into machine learning and look at some more examples.\n",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 18, 2017 11:56:19 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495151390623_830774821",
+      "id": "20170518-234950_1585168541",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003cp\u003eIn the above turorial you have stepped through the following\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eExplained how to create a Tensorflow graph\u003c/li\u003e\n\u003cli\u003eCreate a Tensorflow Constant\u003c/li\u003e\n\u003cli\u003eCreate a Session\u003c/li\u003e\n\u003cli\u003eCreate Graph\u003c/li\u003e\n\u003cli\u003eExecute a Graph\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eIn the later examples you will be delve into machine learning and look at some more examples.\u003c/p\u003e\n"
+      },
+      "dateCreated": "May 18, 2017 11:49:50 PM",
+      "dateStarted": "May 18, 2017 11:56:16 PM",
+      "dateFinished": "May 18, 2017 11:56:16 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495151562990_1413698409",
+      "id": "20170518-235242_131752259",
+      "dateCreated": "May 18, 2017 11:52:42 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Tensorflow_Hello_World",
+  "id": "XBXXZBC9UW1495148763",
+  "angularObjects": {
+    "2CGJHK7F9314001495154604096": [],
+    "2CHP5KFXT314001495154604098": [],
+    "2CGD7416V314001495154604088": [],
+    "2CK3WZ7YJ314001495154727302": []
+  },
+  "config": {
+    "looknfeel": "default"
+  },
+  "info": {},
+  "source": "FCN"
+}
