@@ -3,7 +3,7 @@
     {
       "text": "%md\n### MXNET\nThis is a sample Notebook for MxNet.\n\n",
       "user": "sdutta@qubole.com",
-      "dateUpdated": "May 19, 2017 12:51:10 AM",
+      "dateUpdated": "May 19, 2017 1:27:45 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -16,7 +16,8 @@
           "scatter": {}
         },
         "enabled": true,
-        "editorMode": "ace/mode/markdown"
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true
       },
       "settings": {
         "params": {},
@@ -36,9 +37,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%pyspark\n\nimport mxnet.ndarray as nd\nimport numpy as np\n\nA_np \u003d np.array([[0,1,2,3,4],[5,6,7,8,9]])\nA_nd \u003d nd.array(A_np)  \n\n\n\n",
+      "text": "%pyspark\n\nimport mxnet.ndarray as nd\nimport numpy as np\n\nA_np \u003d np.array([[0,1,2,3,4],[5,6,7,8,9]])\nA_nd \u003d nd.array(A_np)  \n\nprint A_nd\n\n\n\n",
       "user": "sdutta@qubole.com",
-      "dateUpdated": "May 19, 2017 12:49:32 AM",
+      "dateUpdated": "May 19, 2017 1:27:59 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -51,7 +52,8 @@
           "scatter": {}
         },
         "enabled": true,
-        "editorMode": "ace/mode/scala"
+        "editorMode": "ace/mode/scala",
+        "editorHide": false
       },
       "settings": {
         "params": {},
@@ -62,18 +64,18 @@
       "result": {
         "code": "SUCCESS",
         "type": "TEXT",
-        "msg": ""
+        "msg": "\u003cNDArray 2x5 @cpu(0)\u003e\n"
       },
       "dateCreated": "May 19, 2017 12:46:05 AM",
-      "dateStarted": "May 19, 2017 12:49:32 AM",
-      "dateFinished": "May 19, 2017 12:49:32 AM",
+      "dateStarted": "May 19, 2017 1:27:59 AM",
+      "dateFinished": "May 19, 2017 1:27:59 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%pyspark\nimport mxnet as mx\na \u003d mx.nd.ones((2, 3))\nb \u003d a * 2 + 1\nb.asnumpy()",
+      "text": "%pyspark\nimport mxnet as mx\na \u003d mx.nd.ones((2, 3))\nb \u003d a * 2 + 1\nb.asnumpy()\nprint b",
       "user": "sdutta@qubole.com",
-      "dateUpdated": "May 19, 2017 12:49:54 AM",
+      "dateUpdated": "May 19, 2017 1:28:15 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -94,7 +96,26 @@
       },
       "jobName": "paragraph_1495154867097_-1896342719",
       "id": "20170519-004747_1347116954",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\u003cNDArray 2x3 @cpu(0)\u003e\n"
+      },
       "dateCreated": "May 19, 2017 12:47:47 AM",
+      "dateStarted": "May 19, 2017 1:28:15 AM",
+      "dateFinished": "May 19, 2017 1:28:15 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495157295257_-565974612",
+      "id": "20170519-012815_717892864",
+      "dateCreated": "May 19, 2017 1:28:15 AM",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }
