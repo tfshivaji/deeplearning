@@ -19,7 +19,8 @@ The recent remark by Sundar Pichai from Google in 2017 Google I/O is a great exa
 
 ##### A quick Intro to Deep Learning
 
-[![Introduction to Deep Learning](https://github.com/tfshivaji/deeplearning/blob/master/docs/images/DeepLearningFrontPage.png)](https://www.youtube.com/watch?v=iF8dRePlPUo "Introduction to Deep Learning") 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=iF8dRePlPUo" target="_blank"><img src="http://img.youtube.com/vi/iF8dRePlPUo/0.jpg" 
+alt="Deep Learning by Google" width="240" height="180" border="10" /></a>
 
 ### Customers
 
