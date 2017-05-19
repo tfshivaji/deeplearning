@@ -111,7 +111,7 @@
     {
       "text": "%pyspark\n\n#Import tensorflow package\n\nimport tensorflow as tf\n\n#Initialize Weights\n\nW \u003d tf.Variable([.001], tf.float32)\nb \u003d tf.Variable([-.0001], tf.float32)\n\n#Create a placeholder to pass the values of the input values or x and y\n\n# Model input and output\nx \u003d tf.placeholder(tf.float32)\ny \u003d tf.placeholder(tf.float32)\n\n#Model Linear finction\nlinear_function \u003d W*x + b\n\n#Create the Session\nsess \u003d tf.Session()\n\n#Globally initialize the variables\ninit \u003d tf.global_variables_initializer()\n\n#At this step you have to explicitly run it to initialize the variables\nsess.run(init)\n\n\n\n\n\n",
       "user": "sdutta@qubole.com",
-      "dateUpdated": "May 19, 2017 4:21:00 AM",
+      "dateUpdated": "May 19, 2017 10:21:14 PM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -135,11 +135,11 @@
       "result": {
         "code": "SUCCESS",
         "type": "TEXT",
-        "msg": ""
+        "msg": "2017-05-19 22:21:16.352108: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn\u0027t compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.\n2017-05-19 22:21:16.352143: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn\u0027t compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.\n2017-05-19 22:21:16.352150: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn\u0027t compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.\n"
       },
       "dateCreated": "May 19, 2017 4:08:39 AM",
-      "dateStarted": "May 19, 2017 4:21:00 AM",
-      "dateFinished": "May 19, 2017 4:21:00 AM",
+      "dateStarted": "May 19, 2017 10:21:14 PM",
+      "dateFinished": "May 19, 2017 10:21:16 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -182,7 +182,7 @@
     {
       "text": "%pyspark\nprint(sess.run(linear_function, {x:[1,2,3,4,5,6,7,8,9,10,22,25,28]}))",
       "user": "sdutta@qubole.com",
-      "dateUpdated": "May 19, 2017 4:23:55 AM",
+      "dateUpdated": "May 19, 2017 10:21:22 PM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -209,8 +209,8 @@
         "msg": "[ 0.0009  0.0019  0.0029  0.0039  0.0049  0.0059  0.0069  0.0079  0.0089\n  0.0099  0.0219  0.0249  0.0279]\n"
       },
       "dateCreated": "May 19, 2017 4:22:28 AM",
-      "dateStarted": "May 19, 2017 4:23:55 AM",
-      "dateFinished": "May 19, 2017 4:23:55 AM",
+      "dateStarted": "May 19, 2017 10:21:22 PM",
+      "dateFinished": "May 19, 2017 10:21:22 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -253,7 +253,7 @@
     {
       "text": "%md\n\n\u003cp line-height\u003d1100%\u003e\n\u003cfont size\u003d\"3\" color\u003d\"Green\"\u003eWait!! \u003c/font\u003e The function did not do anything special. It has not learnt anything?? \n\nYou got it \u003cstrong\u003e right!! \u003c/strong\u003e\nThe intelligence was given by us about the \u003cstrong\u003ecode\u003c/strong\u003e. \n\n\u003c/p\u003e\n\n\u003cbr/\u003e\n\n- What we would want to do is to come up with a linear function that learns and corrects the linear line.\n- In the example above we gave the weights and bias a random value of ** 0.001 **\n- Why \u003cstrong\u003e 0.001\u003c/strong\u003e?  No real reason, we are just testing right now.\n\u003cp line-height\u003d120%\u003e\n\nOK! You have followed so far. I have some more theory for you.\n\nWhat we want to do is test with a bunch of sample values of till we get the correct slope that **best fits** the line.\n\u003cbr/\u003e\n\nThe process of finding the best fit line done incremenetally or in steps. The function that will help you get this is called \u003cstrong\u003e Cost Function. \u003c/strong\u003e\n\nThe idea is to find the optimal value of \u003cstrong\u003eW\u003c/strong\u003e and \u003cstrong\u003eb\u003c/strong\u003e so that during training the actual value of \u003cstrong\u003ey\u003c/strong\u003e and \u003cstrong\u003ey\u0026#770;\u003c/strong\u003e for a set of input \u003cstrong\u003ex\u003c/strong\u003e.\n\n![Cost Function](https://wingshore.files.wordpress.com/2014/11/images-12.jpg)\n\u003cbr/\u003e\nBelow short video gives a good introduction to the cost function. This is part of the machine learning tutorial mentioned above.\n[Coursera Course on Cost Function](https://www.coursera.org/learn/machine-learning/lecture/rkTp3/cost-function)\n\u003cbr/\u003e\n\u003c/p\u003e\n\n\n\n\n",
       "user": "sdutta@qubole.com",
-      "dateUpdated": "May 19, 2017 10:12:00 PM",
+      "dateUpdated": "May 19, 2017 10:20:58 PM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -267,7 +267,7 @@
         },
         "enabled": true,
         "editorMode": "ace/mode/markdown",
-        "editorHide": false
+        "editorHide": true
       },
       "settings": {
         "params": {},
@@ -287,9 +287,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n\nNow that you have seen an example of how a cost function is calculated. Lets plan to implement in **Tensorflow**.\nA loss function measures how far apart the current model is from the provided data. We\u0027ll use a standard loss model for linear regression, which sums the squares of the deltas between the current model and the provided data. (linear_function - y) - creates a vector where each element is the corresponding example\u0027s error delta. We call [tf.square](https://www.tensorflow.org/api_docs/python/tf/square) to square that error. Then, we sum all the squared errors to create a single scalar that abstracts the error of all examples using [tf.reduce_sum](https://www.tensorflow.org/versions/master/api_docs/python/tf/reduce_sum):\n\n\n    y \u003d tf.placeholder(tf.float32)\n    squared_deltas \u003d tf.square(linear_function - y)\n    loss \u003d tf.reduce_sum(squared_deltas)\n    print(sess.run(loss, {x:[1,2,3,4], y:[0,-1,-2,-3]}))\n    \n\n\u003cbr/\u003e\n",
+      "text": "%md\n\nNow that you have seen an example of how a cost function is calculated. Lets plan to implement in **Tensorflow**.\nA loss function measures how far apart the current model is from the provided data. We\u0027ll use a standard loss model for **linear regression**, \n- which sums the squares of the deltas between the current model and the provided data.\n- (linear_function - y) - creates a vector where each element is the corresponding example\u0027s error delta. \n- We call [tf.square](https://www.tensorflow.org/api_docs/python/tf/square) to square that error. \n\nThen, we sum all the squared errors to create a single scalar that abstracts the error of all examples using [tf.reduce_sum](https://www.tensorflow.org/versions/master/api_docs/python/tf/reduce_sum)\n\n\n\n\n    y \u003d tf.placeholder(tf.float32)\n    squared_deltas \u003d tf.square(linear_function - y)\n    loss \u003d tf.reduce_sum(squared_deltas)\n    print(sess.run(loss, {x:[1,2,3,4], y:[0,-1,-2,-3]}))\n    \n\n\u003cbr/\u003e\n",
       "user": "sdutta@qubole.com",
-      "dateUpdated": "May 19, 2017 10:16:44 PM",
+      "dateUpdated": "May 19, 2017 10:19:18 PM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -302,7 +302,8 @@
           "scatter": {}
         },
         "enabled": true,
-        "editorMode": "ace/mode/markdown"
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true
       },
       "settings": {
         "params": {},
@@ -313,23 +314,181 @@
       "result": {
         "code": "SUCCESS",
         "type": "HTML",
-        "msg": "\u003cp\u003eNow that you have seen an example of how a cost function is calculated. Lets plan to implement in \u003cstrong\u003eTensorflow\u003c/strong\u003e.\n\u003cbr  /\u003eA loss function measures how far apart the current model is from the provided data. We\u0027ll use a standard loss model for linear regression, which sums the squares of the deltas between the current model and the provided data. (linear_function - y) - creates a vector where each element is the corresponding example\u0027s error delta. We call \u003ca href\u003d\"https://www.tensorflow.org/api_docs/python/tf/square\"\u003etf.square\u003c/a\u003e to square that error. Then, we sum all the squared errors to create a single scalar that abstracts the error of all examples using \u003ca href\u003d\"https://www.tensorflow.org/versions/master/api_docs/python/tf/reduce_sum\"\u003etf.reduce_sum\u003c/a\u003e:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003ey \u003d tf.placeholder(tf.float32)\nsquared_deltas \u003d tf.square(linear_function - y)\nloss \u003d tf.reduce_sum(squared_deltas)\nprint(sess.run(loss, {x:[1,2,3,4], y:[0,-1,-2,-3]}))\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e\u003cbr /\u003e\u003c/p\u003e\n"
+        "msg": "\u003cp\u003eNow that you have seen an example of how a cost function is calculated. Lets plan to implement in \u003cstrong\u003eTensorflow\u003c/strong\u003e.\n\u003cbr  /\u003eA loss function measures how far apart the current model is from the provided data. We\u0027ll use a standard loss model for \u003cstrong\u003elinear regression\u003c/strong\u003e,\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003ewhich sums the squares of the deltas between the current model and the provided data.\u003c/li\u003e\n\u003cli\u003e(linear_function - y) - creates a vector where each element is the corresponding example\u0027s error delta.\u003c/li\u003e\n\u003cli\u003eWe call \u003ca href\u003d\"https://www.tensorflow.org/api_docs/python/tf/square\"\u003etf.square\u003c/a\u003e to square that error.\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eThen, we sum all the squared errors to create a single scalar that abstracts the error of all examples using \u003ca href\u003d\"https://www.tensorflow.org/versions/master/api_docs/python/tf/reduce_sum\"\u003etf.reduce_sum\u003c/a\u003e\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003ey \u003d tf.placeholder(tf.float32)\nsquared_deltas \u003d tf.square(linear_function - y)\nloss \u003d tf.reduce_sum(squared_deltas)\nprint(sess.run(loss, {x:[1,2,3,4], y:[0,-1,-2,-3]}))\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e\u003cbr /\u003e\u003c/p\u003e\n"
       },
       "dateCreated": "May 19, 2017 9:34:10 PM",
-      "dateStarted": "May 19, 2017 10:16:44 PM",
-      "dateFinished": "May 19, 2017 10:16:44 PM",
+      "dateStarted": "May 19, 2017 10:19:05 PM",
+      "dateFinished": "May 19, 2017 10:19:05 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "config": {},
+      "text": "%pyspark\ny \u003d tf.placeholder(tf.float32)\nsquared_deltas \u003d tf.square(linear_function - y)\nloss \u003d tf.reduce_sum(squared_deltas)\nprint(sess.run(loss, {x:[1,2,3,4], y:[0,-1,-2,-3]}))",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 19, 2017 10:21:28 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
       "settings": {
         "params": {},
         "forms": {}
       },
       "jobName": "paragraph_1495232023433_-1020135886",
       "id": "20170519-221343_1734641709",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "14.0388\n"
+      },
       "dateCreated": "May 19, 2017 10:13:43 PM",
+      "dateStarted": "May 19, 2017 10:21:28 PM",
+      "dateFinished": "May 19, 2017 10:21:28 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\u003cbr/\u003e\nWe could improve this manually by reassigning the values of W and b to the perfect values of -1 and 1. \n\nA variable is initialized to the value provided to tf.\nVariable but can be changed using operations like tf.assign. \nFor example, W\u003d-1 and b\u003d1 are the optimal parameters for our model. We can change W and b accordingly:\n\n    fixW \u003d tf.assign(W, [-1.])\n    fixb \u003d tf.assign(b, [1.])\n    sess.run([fixW, fixb])\n    print(sess.run(loss, {x:[1,2,3,4], y:[0,-1,-2,-3]}))",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 19, 2017 10:23:31 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495232373227_-848231393",
+      "id": "20170519-221933_1225378015",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003cp\u003e\u003cbr /\u003e\n\u003cbr  /\u003eWe could improve this manually by reassigning the values of W and b to the perfect values of -1 and 1.\u003c/p\u003e\n\u003cp\u003eA variable is initialized to the value provided to tf.\n\u003cbr  /\u003eVariable but can be changed using operations like tf.assign.\n\u003cbr  /\u003eFor example, W\u003d-1 and b\u003d1 are the optimal parameters for our model. We can change W and b accordingly:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003efixW \u003d tf.assign(W, [-1.])\nfixb \u003d tf.assign(b, [1.])\nsess.run([fixW, fixb])\nprint(sess.run(loss, {x:[1,2,3,4], y:[0,-1,-2,-3]}))\n\u003c/code\u003e\u003c/pre\u003e\n"
+      },
+      "dateCreated": "May 19, 2017 10:19:33 PM",
+      "dateStarted": "May 19, 2017 10:23:31 PM",
+      "dateFinished": "May 19, 2017 10:23:31 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n\n#Reassigning to the values of W and b\nfixW \u003d tf.assign(W, [-1.])\nfixb \u003d tf.assign(b, [1.])\nsess.run([fixW, fixb])\nprint(sess.run(loss, {x:[1,2,3,4], y:[0,-1,-2,-3]}))",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 19, 2017 10:24:17 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495232516395_880612336",
+      "id": "20170519-222156_1392629912",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "0.0\n"
+      },
+      "dateCreated": "May 19, 2017 10:21:56 PM",
+      "dateStarted": "May 19, 2017 10:24:17 PM",
+      "dateFinished": "May 19, 2017 10:24:17 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\u003cbr/\u003e\n\nWow! Now we see a loss of \u003cb\u003e0.0\u003c/b\u003e. \nWe guessed the **\"perfect\"** values of **W and b**, but the whole point of machine learning is to find the correct model parameters automatically. We will show how to accomplish this in the next section.\n\u003cbr/\u003e\n### Optimizers\nA complete discussion of machine learning is out of the scope of this tutorial. However, TensorFlow provides **optimizers** that slowly change each variable in order to minimize the **loss** function. The simplest **optimizer is gradient descent**. It modifies each variable according to the magnitude of the derivative of loss with respect to that variable. In general, computing symbolic derivatives manually is tedious and error-prone. Consequently, **TensorFlow** can **automatically produce derivatives** given only a description of the model using the function [tf.gradients](https://www.tensorflow.org/versions/master/api_docs/python/tf/gradients). For simplicity, optimizers typically do this for you.\n\u003cbr/\u003e\n",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 19, 2017 10:43:54 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495232657660_1632243121",
+      "id": "20170519-222417_1100786038",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003cp\u003e\u003cbr /\u003e\u003c/p\u003e\n\u003cp\u003eWow! Now we see a loss of \u003cb\u003e0.0\u003c/b\u003e.\n\u003cbr  /\u003eWe guessed the \u003cstrong\u003e\u0026ldquo;perfect\u0026rdquo;\u003c/strong\u003e values of \u003cstrong\u003eW and b\u003c/strong\u003e, but the whole point of machine learning is to find the correct model parameters automatically. We will show how to accomplish this in the next section.\n\u003cbr  /\u003e\u003cbr /\u003e\u003c/p\u003e\n\u003ch3\u003eOptimizers\u003c/h3\u003e\n\u003cp\u003eA complete discussion of machine learning is out of the scope of this tutorial. However, TensorFlow provides \u003cstrong\u003eoptimizers\u003c/strong\u003e that slowly change each variable in order to minimize the \u003cstrong\u003eloss\u003c/strong\u003e function. The simplest \u003cstrong\u003eoptimizer is gradient descent\u003c/strong\u003e. It modifies each variable according to the magnitude of the derivative of loss with respect to that variable. In general, computing symbolic derivatives manually is tedious and error-prone. Consequently, \u003cstrong\u003eTensorFlow\u003c/strong\u003e can \u003cstrong\u003eautomatically produce derivatives\u003c/strong\u003e given only a description of the model using the function \u003ca href\u003d\"https://www.tensorflow.org/versions/master/api_docs/python/tf/gradients\"\u003etf.gradients\u003c/a\u003e. For simplicity, optimizers typically do this for you.\n\u003cbr  /\u003e\u003cbr /\u003e\u003c/p\u003e\n"
+      },
+      "dateCreated": "May 19, 2017 10:24:17 PM",
+      "dateStarted": "May 19, 2017 10:43:54 PM",
+      "dateFinished": "May 19, 2017 10:43:54 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 19, 2017 10:41:35 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495232724700_65986188",
+      "id": "20170519-222524_549899529",
+      "dateCreated": "May 19, 2017 10:25:24 PM",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }
