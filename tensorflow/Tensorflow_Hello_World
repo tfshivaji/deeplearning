@@ -612,14 +612,50 @@
       "progressUpdateIntervalMs": 500
     },
     {
+      "text": "%md\nPlease follow the examples from Github",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 19, 2017 1:24:37 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495157007312_2044351273",
+      "id": "20170519-012327_703562160",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003cp\u003ePlease follow the examples from Github\u003c/p\u003e\n"
+      },
+      "dateCreated": "May 19, 2017 1:23:27 AM",
+      "dateStarted": "May 19, 2017 1:24:35 AM",
+      "dateFinished": "May 19, 2017 1:24:35 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
       "config": {},
       "settings": {
         "params": {},
         "forms": {}
       },
-      "jobName": "paragraph_1495151562990_1413698409",
-      "id": "20170518-235242_131752259",
-      "dateCreated": "May 18, 2017 11:52:42 PM",
+      "jobName": "paragraph_1495157045866_222211131",
+      "id": "20170519-012405_573162315",
+      "dateCreated": "May 19, 2017 1:24:05 AM",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }
