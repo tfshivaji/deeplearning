@@ -1,0 +1,62 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n### Machine Learning \n\nThis notebook walks you through a simple example of building a simple linear model.\nWe will introduce the concept of Variable and use to do some simple calculations.\nYou will learn\n* **Initialize Weight and bias Variables**\n* **Difference between Variables and Constants**\n* **Globally initialize Variables**\n* **Create a Session**\n* **Create a simple loss function**\n\nThe below example shows a Linear model of how we can model a function that can predict the relationship between Outside temperature and the ice-cream sold.\nThis graph is just a representation of what a linear model looks like\n\n![Linear Model Graph](https://2.bp.blogspot.com/-Ae16jkCOKgs/Vbu8OCl7mlI/AAAAAAAACNM/jWaJJeMf7Ro/s1600/LinearModel.png)\n\nA linear function can be written in the format of \n\n    y \u003d mx + b\n    \n    m \u003d Slope of the line\n    b \u003d offset\n    \nIn Machine learning we try to derive a function looking at the data that best fits data without much bias. \n\nAn excellent course by Andrew Ng, can be found on [Coursera Machine Learning](https://www.coursera.org/learn/machine-learning)\n\n![Andrew Ng](https://www.cmu.edu/silicon-valley/news-events/dls/2014/images/andrewng-headshot.png)\n\n",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 19, 2017 3:37:52 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495164071833_-603996952",
+      "id": "20170519-032111_1021636815",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eMachine Learning\u003c/h3\u003e\n\u003cp\u003eThis notebook walks you through a simple example of building a simple linear model.\n\u003cbr  /\u003eWe will introduce the concept of Variable and use to do some simple calculations.\n\u003cbr  /\u003eYou will learn\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003eInitialize Weight and bias Variables\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eDifference between Variables and Constants\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eGlobally initialize Variables\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eCreate a Session\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eCreate a simple loss function\u003c/strong\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eThe below example shows a Linear model of how we can model a function that can predict the relationship between Outside temperature and the ice-cream sold.\n\u003cbr  /\u003eThis graph is just a representation of what a linear model looks like\u003c/p\u003e\n\u003cp\u003e\u003cimg src\u003d\"https://2.bp.blogspot.com/-Ae16jkCOKgs/Vbu8OCl7mlI/AAAAAAAACNM/jWaJJeMf7Ro/s1600/LinearModel.png\" alt\u003d\"Linear Model Graph\" /\u003e\u003c/p\u003e\n\u003cp\u003eA linear function can be written in the format of\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003ey \u003d mx + b\n\nm \u003d Slope of the line\nb \u003d offset\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eIn Machine learning we try to derive a function looking at the data that best fits data without much bias.\u003c/p\u003e\n\u003cp\u003eAn excellent course by Andrew Ng, can be found on \u003ca href\u003d\"https://www.coursera.org/learn/machine-learning\"\u003eCoursera Machine Learning\u003c/a\u003e\u003c/p\u003e\n\u003cp\u003e\u003cimg src\u003d\"https://www.cmu.edu/silicon-valley/news-events/dls/2014/images/andrewng-headshot.png\" alt\u003d\"Andrew Ng\" /\u003e\u003c/p\u003e\n"
+      },
+      "dateCreated": "May 19, 2017 3:21:11 AM",
+      "dateStarted": "May 19, 2017 3:37:52 AM",
+      "dateFinished": "May 19, 2017 3:37:52 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495164527308_147648036",
+      "id": "20170519-032847_334463211",
+      "dateCreated": "May 19, 2017 3:28:47 AM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Tensorflow_Hello_World_Part2",
+  "id": "SNHYKES2TX1495164070",
+  "angularObjects": {
+    "2CGJHK7F9314001495154604096": [],
+    "2CHP5KFXT314001495154604098": [],
+    "2CGD7416V314001495154604088": [],
+    "2CK3WZ7YJ314001495154727302": []
+  },
+  "config": {},
+  "info": {},
+  "source": "FCN"
+}
