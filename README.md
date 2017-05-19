@@ -17,6 +17,10 @@ With the recent discoveries in Activation Functions, cheap compute with (GPUs), 
 The recent remark by Sundar Pichai from Google in 2017 Google I/O is a great example. Google has brought AI to every product.
 [Google Ai](https://google.ai/ "Google AI")
 
+##### A quick Intro to Deep Learning
+
+[![Introduction to Deep Learning](https://github.com/tfshivaji/deeplearning/blob/master/docs/images/DeepLearningFrontPage.png)](https://www.youtube.com/watch?v=iF8dRePlPUo "Introduction to Deep Learning") 
+
 ### Customers
 
 At Qubole the plan is to enable customers with Deep Learning capabilities. This repository is for sample code and to get started on QDS with deep learning capabilities. 
