@@ -15,6 +15,7 @@ Read more about Qubole on [docs](http://docs.qubole.com "Qubole Docs")
 With the recent discoveries in Activation Functions, cheap compute with (GPUs), there is an increasing demand to support AI and make AI the core of every product and innovation.
 
 The recent remark by Sundar Pichai from Google in 2017 Google I/O is a great example. Google has brought AI to every product.
+[Google Ai](https://google.ai/ "Google AI")
 
 ### Customers
 
