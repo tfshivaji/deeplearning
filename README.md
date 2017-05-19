@@ -3,7 +3,7 @@
 
 You can read more about Qubole Data Services on the following links
 
-- ![Qubole](https://www.qubole.com)
+- [Qubole]https://www.qubole.com
 
 ### Qubole Data Services
 
@@ -31,7 +31,7 @@ startup_scripts - These are QDS startup scripts
 ```markdown
 
 Notebooks - These are Zepplin Notebooks. You can directly import them by linking from Qubole Github link.
-The details on the documentation for QDS and Zepplin can be found here - ![QDS Zepplin](http://docs.qubole.com/en/latest/user-guide/features/notebook/link-notebook-github.html)
+The details on the documentation for QDS and Zepplin can be found here - [QDS Zepplin] <http://docs.qubole.com/en/latest/user-guide/features/notebook/link-notebook-github.html>
 
 ### Support or Contact
 Please contact sdutta@qubole.com for the above work
