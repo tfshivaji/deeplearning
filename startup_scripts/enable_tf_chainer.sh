@@ -11,6 +11,6 @@ pip install graphviz
 pip install pydot2
 pip install sklearn
 pip install matplotlib
-pip install mxnet
+pip install chainer
 pip install pillow
 sudo yum install tkinter
