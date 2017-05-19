@@ -7,7 +7,8 @@ You can read more about Qubole Data Services on the following links
 
 ### Qubole Data Services
 
-Qubole provides Hadoop and Spark Services on Cloud Platform. It is a self service platform
+Qubole provides Hadoop and Spark Services on Cloud Platform. It is a self service platform.
+Read more about Qubole on [docs](http://docs.qubole.com "Qubole Docs")
 
 ### Deep Learning
 
@@ -22,13 +23,13 @@ At Qubole the plan is to enable customers with Deep Learning capabilities. This 
 
 
 Each folder
-```markdown
-tensorflow - Contains code for tensorflow
-mxmet - Contains sample code for Apache Mxnet
-startup_scripts - These are QDS startup scripts
+```
+	tensorflow - Contains code for tensorflow
+	mxmet - Contains sample code for Apache Mxnet
+	startup_scripts - These are QDS startup scripts
 
 
-```markdown
+```
 
 Notebooks - These are Zepplin Notebooks. You can directly import them by linking from Qubole Github link.
 The details on the documentation for QDS and Zepplin can be found here - [QDS Zepplin](http://docs.qubole.com/en/latest/user-guide/features/notebook/link-notebook-github.html)
