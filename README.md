@@ -22,7 +22,7 @@ The recent remark by Sundar Pichai from Google in 2017 Google I/O is a great exa
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=iF8dRePlPUo" target="_blank"><img src="http://img.youtube.com/vi/iF8dRePlPUo/0.jpg" 
 alt="Deep Learning by Google" width="580" height="400" border="10" /></a>
 
-### Customers
+### Repository
 
 At Qubole the plan is to enable customers with Deep Learning capabilities. This repository is for sample code and to get started on QDS with deep learning capabilities. 
 
