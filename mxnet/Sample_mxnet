@@ -1,0 +1,134 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n### MXNET\nThis is a sample Notebook for MxNet.\n\n",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 19, 2017 1:27:45 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495154727119_-2006932575",
+      "id": "20170519-004527_1084875082",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eMXNET\u003c/h3\u003e\n\u003cp\u003eThis is a sample Notebook for MxNet\u003c/p\u003e\n"
+      },
+      "dateCreated": "May 19, 2017 12:45:27 AM",
+      "dateStarted": "May 19, 2017 12:50:53 AM",
+      "dateFinished": "May 19, 2017 12:50:53 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n\nimport mxnet.ndarray as nd\nimport numpy as np\n\nA_np \u003d np.array([[0,1,2,3,4],[5,6,7,8,9]])\nA_nd \u003d nd.array(A_np)  \n\nprint A_nd\n\n\n\n",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 19, 2017 1:27:59 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495154765062_706209399",
+      "id": "20170519-004605_2016754448",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\u003cNDArray 2x5 @cpu(0)\u003e\n"
+      },
+      "dateCreated": "May 19, 2017 12:46:05 AM",
+      "dateStarted": "May 19, 2017 1:27:59 AM",
+      "dateFinished": "May 19, 2017 1:27:59 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nimport mxnet as mx\na \u003d mx.nd.ones((2, 3))\nb \u003d a * 2 + 1\nb.asnumpy()\nprint b",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 19, 2017 1:28:15 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495154867097_-1896342719",
+      "id": "20170519-004747_1347116954",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\u003cNDArray 2x3 @cpu(0)\u003e\n"
+      },
+      "dateCreated": "May 19, 2017 12:47:47 AM",
+      "dateStarted": "May 19, 2017 1:28:15 AM",
+      "dateFinished": "May 19, 2017 1:28:15 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495157295257_-565974612",
+      "id": "20170519-012815_717892864",
+      "dateCreated": "May 19, 2017 1:28:15 AM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Sample_mxnet",
+  "id": "C695251PZX1495154724",
+  "angularObjects": {
+    "2CGJHK7F9314001495154604096": [],
+    "2CHP5KFXT314001495154604098": [],
+    "2CGD7416V314001495154604088": [],
+    "2CK3WZ7YJ314001495154727302": []
+  },
+  "config": {},
+  "info": {},
+  "source": "FCN"
+}
