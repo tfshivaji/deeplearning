@@ -1,37 +1,37 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/tfshivaji/deeplearning/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## Welcome Deep Learning on Qubole Data Services
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+You can read more about Qubole Data Services on the following links
 
-### Markdown
+- ![Qubole](https://www.qubole.com)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Qubole Data Services
+
+Qubole provides Hadoop and Spark Services on Cloud Platform. It is a self service platform
+
+### Deep Learning
+
+With the recent discoveries in Activation Functions, cheap compute with (GPUs), there is an increasing demand to support AI and make AI the core of every product and innovation.
+
+The recent remark by Sundar Pichai from Google in 2017 Google I/O is a great example. Google has brough AI to every product.
+
+### Customers
+
+At Qubole the plan is to enable customers with Deep Learning capabilities. This repository is for sample code and to get started on QDS with deep learning capabilities. 
+
+
+
+Each folder
+```markdown
+tensorflow - Contains code for tensorflow
+mxmet - Contains sample code for Apache Mxnet
+startup_scripts - These are QDS startup scripts
+
 
 ```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/tfshivaji/deeplearning/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Notebooks - These are Zepplin Notebooks. You can directly import them by linking from Qubole Github link.
+The details on the documentation for QDS and Zepplin can be found here - ![QDS Zepplin](http://docs.qubole.com/en/latest/user-guide/features/notebook/link-notebook-github.html)
 
 ### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Please contact sdutta@qubole.com for the above work
