@@ -1,0 +1,62 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n### MNIST \n\nMNIST is a simple computer vision dataset. It consists of images of handwritten digits like these:\n![](https://www.tensorflow.org/images/MNIST.png)\n\nThis dataset was first used by Yann LeCunn for handwriting recoginition. These were the first simple usecases of Neural Nets that have been there for a long time. These are used by post offices to understand handwritten zip codes.\n\nWhat we will be working here is an example of Supervised Learning. For supervised learning we need a labeled dataset.\nA labeled datset is one where you have the original image or data and the real value against it.\n\nThe machine learning algorithm learns from the image or the input to develop a function, that could predict the answer.\n\nMNIST has been a good dataset that works as an starting example\n",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 20, 2017 3:28:37 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495250322959_25836177",
+      "id": "20170520-031842_1485055379",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eMNIST\u003c/h3\u003e\n\u003cp\u003eMNIST is a simple computer vision dataset. It consists of images of handwritten digits like these:\n\u003cbr  /\u003e\u003cimg src\u003d\"https://www.tensorflow.org/images/MNIST.png\" alt\u003d\"\" /\u003e\u003c/p\u003e\n\u003cp\u003eThis dataset was first used by Yann LeCunn for handwriting recoginition. These were the first simple usecases of Neural Nets that have been there for a long time. These are used by post offices to understand handwritten zip codes.\u003c/p\u003e\n\u003cp\u003eWhat we will be working here is an example of Supervised Learning. For supervised learning we need a labeled dataset.\n\u003cbr  /\u003eA labeled datset is one where you have the original image or data and the real value against it.\u003c/p\u003e\n\u003cp\u003eThe machine learning algorithm learns from the image or the input to develop a function, that could predict the answer\u003c/p\u003e\n"
+      },
+      "dateCreated": "May 20, 2017 3:18:42 AM",
+      "dateStarted": "May 20, 2017 3:28:07 AM",
+      "dateFinished": "May 20, 2017 3:28:07 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495250665581_811972293",
+      "id": "20170520-032425_1796164318",
+      "dateCreated": "May 20, 2017 3:24:25 AM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Convolution_Neural_Network",
+  "id": "9A96BW8EQB1495250321",
+  "angularObjects": {
+    "2CGJHK7F9314001495154604096": [],
+    "2CHP5KFXT314001495154604098": [],
+    "2CGD7416V314001495154604088": [],
+    "2CK3WZ7YJ314001495154727302": []
+  },
+  "config": {},
+  "info": {},
+  "source": "FCN"
+}
