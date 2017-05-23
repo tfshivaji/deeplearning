@@ -1,0 +1,172 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n### MNIST \n\nMNIST is a simple computer vision dataset. It consists of images of handwritten digits like these:\n![](https://www.tensorflow.org/images/MNIST.png)\n\nThis dataset was first used by [Yann LeCunn](http://yann.lecun.com/exdb/mnist/) for handwriting recoginition.\nIt is a good database for people who want to try learning techniques and pattern recognition methods on real-world data while spending minimal efforts on preprocessing and formatting.\n\u003cbr/\u003e\nWhat we will be working here is an example of Supervised Learning. For supervised learning we need a labeled dataset.\nA labeled datset is one where you have the original image or data and the real value against it. \nFor example, the labels for the above images are **5**,**0**,**4**, and **1**.\n\u003cbr/\u003e\nThe machine learning algorithm learns from the image or the input to develop a function, that could predict the answer.\nMNIST has been a good dataset that works as an starting example in any deep learning code base.\n\u003cbr/\u003e\nIn this tutorial, we\u0027re going to train a model to look at images and predict what digits they are. Our goal isn\u0027t to train a really elaborate model that achieves state-of-the-art performance. As such, we\u0027re going to start with a very simple model, called a **Softmax Regression**.\n\u003cbr/\u003e\n\n    import tensorflow as tf\n    from tensorflow.examples.tutorials.mnist import input_data\n    mnist \u003d input_data.read_data_sets(\"MNIST_data/\", one_hot\u003dTrue)\n\nMost machine learning packages provide a way to download MNIST dataset. The details of the code can be found in the [Tensorflow MNIST abstraction Implementation](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/learn/python/learn/datasets)\n\n\u003cbr/\u003e\nThe MNIST data is split into three parts: 55,000 data points of training data (mnist.train), 10,000 points of test data (mnist.test), and 5,000 points of validation data (mnist.validation). This split is very important: it\u0027s essential in machine learning that we have separate data which we don\u0027t learn from so that we can make sure that what we\u0027ve learned actually generalizes!\n\u003cbr/\u003e\nAs mentioned earlier, every MNIST data point has two parts: an image of a handwritten digit and a corresponding label. We\u0027ll call the images \"x\" and the labels \"y\". Both the training set and test set contain images and their corresponding labels; for example the training images are mnist.train.images and the training labels are mnist.train.labels.\n\u003cbr/\u003e\nEach image is 28 pixels by 28 pixels. We can interpret this as a big array of numbers:\n![](https://www.tensorflow.org/images/MNIST-Matrix.png)\n\u003cbr/\u003e\n\nThe above picture gives a good example of what IMAGE looks like to a computer and why it is so hard to make sense of it. \nIt is an **array** of pixels. In the MNIST case it is a black and white picture, so the color channels are not needed. In a colored image you would have another 3 channels to represent it in RGB. For the same MNIST dataset a colored picture would me a 3 dimensional array of [3,28,28].\n\n\u003cbr/\u003e\n\nA details on MNIST handwritten dataset can be read up on [Colah\u0027s blog](http://colah.github.io/posts/2014-10-Visualizing-MNIST/).\n\u003cbr/\u003e\nThe result is that mnist.train.images is a tensor (an n-dimensional array) with a shape of [55000, 784]. The first dimension is an index into the list of images and the second dimension is the index for each pixel in each image. Each entry in the tensor is a pixel intensity between 0 and 1, for a particular pixel in a particular image.\n![](https://www.tensorflow.org/images/mnist-train-xs.png)\n\n\u003cbr/\u003e\nEach image in MNIST has a corresponding label, a number between **0 and 9** representing the digit drawn in the image.\n#### One Hot Vector\n\nA one-hot vector is a vector which is 0 in most dimensions, and 1 in a single dimension. This is commonly used in Machine Learning Supervised Learning Algorithms represent a set of labels. It is very useful weather is it true false or to implement multiple categories.\n\nIn this case, the nth digit will be represented as a vector which is 1 in the nth dimension. For example, 3 would be [0,0,0,1,0,0,0,0,0,0]. Consequently, mnist.train.labels is a [55000, 10] array of floats.\n\u003cbr/\u003e\n\n#### Tutorial Objective\n\n* Learn about the MNIST data and softmax regressions\n* Create a function that is a model for recognizing digits, based on looking at every pixel in the image\n* Use TensorFlow to train the model to recognize digits by having it \"look\" at thousands of examples (and run our first TensorFlow session to do so)\n* Check the model\u0027s accuracy with our test data",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 21, 2017 12:17:21 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495250322959_25836177",
+      "id": "20170520-031842_1485055379",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eMNIST\u003c/h3\u003e\n\u003cp\u003eMNIST is a simple computer vision dataset. It consists of images of handwritten digits like these:\n\u003cbr  /\u003e\u003cimg src\u003d\"https://www.tensorflow.org/images/MNIST.png\" alt\u003d\"\" /\u003e\u003c/p\u003e\n\u003cp\u003eThis dataset was first used by \u003ca href\u003d\"http://yann.lecun.com/exdb/mnist/\"\u003eYann LeCunn\u003c/a\u003e for handwriting recoginition.\n\u003cbr  /\u003eIt is a good database for people who want to try learning techniques and pattern recognition methods on real-world data while spending minimal efforts on preprocessing and formatting.\n\u003cbr  /\u003e\u003cbr /\u003e\n\u003cbr  /\u003eWhat we will be working here is an example of Supervised Learning. For supervised learning we need a labeled dataset.\n\u003cbr  /\u003eA labeled datset is one where you have the original image or data and the real value against it.\n\u003cbr  /\u003eFor example, the labels for the above images are \u003cstrong\u003e5\u003c/strong\u003e,\u003cstrong\u003e0\u003c/strong\u003e,\u003cstrong\u003e4\u003c/strong\u003e, and \u003cstrong\u003e1\u003c/strong\u003e.\n\u003cbr  /\u003e\u003cbr /\u003e\n\u003cbr  /\u003eThe machine learning algorithm learns from the image or the input to develop a function, that could predict the answer.\n\u003cbr  /\u003eMNIST has been a good dataset that works as an starting example in any deep learning code base.\n\u003cbr  /\u003e\u003cbr /\u003e\n\u003cbr  /\u003eIn this tutorial, we\u0027re going to train a model to look at images and predict what digits they are. Our goal isn\u0027t to train a really elaborate model that achieves state-of-the-art performance. As such, we\u0027re going to start with a very simple model, called a \u003cstrong\u003eSoftmax Regression\u003c/strong\u003e.\n\u003cbr  /\u003e\u003cbr /\u003e\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eimport tensorflow as tf\nfrom tensorflow.examples.tutorials.mnist import input_data\nmnist \u003d input_data.read_data_sets(\"MNIST_data/\", one_hot\u003dTrue)\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eMost machine learning packages provide a way to download MNIST dataset. The details of the code can be found in the \u003ca href\u003d\"https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/learn/python/learn/datasets\"\u003eTensorflow MNIST abstraction Implementation\u003c/a\u003e\u003c/p\u003e\n\u003cp\u003e\u003cbr /\u003e\n\u003cbr  /\u003eThe MNIST data is split into three parts: 55,000 data points of training data (mnist.train), 10,000 points of test data (mnist.test), and 5,000 points of validation data (mnist.validation). This split is very important: it\u0027s essential in machine learning that we have separate data which we don\u0027t learn from so that we can make sure that what we\u0027ve learned actually generalizes!\n\u003cbr  /\u003e\u003cbr /\u003e\n\u003cbr  /\u003eAs mentioned earlier, every MNIST data point has two parts: an image of a handwritten digit and a corresponding label. We\u0027ll call the images \u0026ldquo;x\u0026rdquo; and the labels \u0026ldquo;y\u0026rdquo;. Both the training set and test set contain images and their corresponding labels; for example the training images are mnist.train.images and the training labels are mnist.train.labels.\n\u003cbr  /\u003e\u003cbr /\u003e\n\u003cbr  /\u003eEach image is 28 pixels by 28 pixels. We can interpret this as a big array of numbers:\n\u003cbr  /\u003e\u003cimg src\u003d\"https://www.tensorflow.org/images/MNIST-Matrix.png\" alt\u003d\"\" /\u003e\n\u003cbr  /\u003e\u003cbr /\u003e\u003c/p\u003e\n\u003cp\u003eThe above picture gives a good example of what IMAGE looks like to a computer and why it is so hard to make sense of it.\n\u003cbr  /\u003eIt is an \u003cstrong\u003earray\u003c/strong\u003e of pixels. In the MNIST case it is a black and white picture, so the color channels are not needed. In a colored image you would have another 3 channels to represent it in RGB. For the same MNIST dataset a colored picture would me a 3 dimensional array of [3,28,28].\u003c/p\u003e\n\u003cp\u003e\u003cbr /\u003e\u003c/p\u003e\n\u003cp\u003eA details on MNIST handwritten dataset can be read up on \u003ca href\u003d\"http://colah.github.io/posts/2014-10-Visualizing-MNIST/\"\u003eColah\u0027s blog\u003c/a\u003e.\n\u003cbr  /\u003e\u003cbr /\u003e\n\u003cbr  /\u003eThe result is that mnist.train.images is a tensor (an n-dimensional array) with a shape of [55000, 784]. The first dimension is an index into the list of images and the second dimension is the index for each pixel in each image. Each entry in the tensor is a pixel intensity between 0 and 1, for a particular pixel in a particular image.\n\u003cbr  /\u003e\u003cimg src\u003d\"https://www.tensorflow.org/images/mnist-train-xs.png\" alt\u003d\"\" /\u003e\u003c/p\u003e\n\u003cp\u003e\u003cbr /\u003e\n\u003cbr  /\u003eEach image in MNIST has a corresponding label, a number between \u003cstrong\u003e0 and 9\u003c/strong\u003e representing the digit drawn in the image.\u003c/p\u003e\n\u003ch4\u003eOne Hot Vector\u003c/h4\u003e\n\u003cp\u003eA one-hot vector is a vector which is 0 in most dimensions, and 1 in a single dimension. This is commonly used in Machine Learning Supervised Learning Algorithms represent a set of labels. It is very useful weather is it true false or to implement multiple categories.\u003c/p\u003e\n\u003cp\u003eIn this case, the nth digit will be represented as a vector which is 1 in the nth dimension. For example, 3 would be [0,0,0,1,0,0,0,0,0,0]. Consequently, mnist.train.labels is a [55000, 10] array of floats.\n\u003cbr  /\u003e\u003cbr /\u003e\u003c/p\u003e\n\u003ch4\u003eTutorial Objective\u003c/h4\u003e\n\u003cul\u003e\n\u003cli\u003eLearn about the MNIST data and softmax regressions\u003c/li\u003e\n\u003cli\u003eCreate a function that is a model for recognizing digits, based on looking at every pixel in the image\u003c/li\u003e\n\u003cli\u003eUse TensorFlow to train the model to recognize digits by having it \u0026ldquo;look\u0026rdquo; at thousands of examples (and run our first TensorFlow session to do so)\u003c/li\u003e\n\u003cli\u003eCheck the model\u0027s accuracy with our test data\u003c/li\u003e\n\u003c/ul\u003e\n"
+      },
+      "dateCreated": "May 20, 2017 3:18:42 AM",
+      "dateStarted": "May 21, 2017 12:14:37 AM",
+      "dateFinished": "May 21, 2017 12:14:37 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n\nimport tensorflow as tf\nfrom tensorflow.examples.tutorials.mnist import input_data\n\n# Dowload the MNIST data\nmnist \u003d input_data.read_data_sets(\"MNIST_data/\", one_hot\u003dTrue)\n\n\n#Create a placeholder for the input images\n#They are each 28x28 pixels (28*28\u003d784)\n#None - Say it can take a variable sized dataset bah\nx \u003d tf.placeholder(tf.float32, [None, 784])\n\n\n#For simplicity we will initialize the weights with a size of 0\n#Notice that W has a shape of [784, 10] because we want to multiply the 784-dimensional image vectors by it to produce 10-dimensional vectors of evidence for the difference #classes. b has a shape of [10] so we can add it to the output.\n\nW \u003d tf.Variable(tf.zeros([784, 10]))\nb \u003d tf.Variable(tf.zeros([10]))\n\n# This is is a linear function\n# In this case we are multiplying a [nx784]*[784x10] + [10] dimensional vector size\n# n will be the batch size that will be given\nlinear_function \u003d tf.matmul(x, W) + b\n\n\n# We add a softmax \n#This is how the derived values of y from an input of x\ny \u003d tf.nn.softmax(linear_function)\n\n#y_ holds the actual values of the y_\ny_ \u003d tf.placeholder(tf.float32, [None, 10])\n\n\ncross_entropy \u003d tf.reduce_mean(\n      tf.nn.softmax_cross_entropy_with_logits(labels\u003dy_, logits\u003dy))\ntrain_step \u003d tf.train.GradientDescentOptimizer(0.5).minimize(cross_entropy)\n\nsess \u003d tf.InteractiveSession()\ninit \u003d tf.global_variables_initializer()\nsess.run(init)\n\n",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 21, 2017 12:18:41 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495250665581_811972293",
+      "id": "20170520-032425_1796164318",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "Extracting MNIST_data/train-images-idx3-ubyte.gz\nExtracting MNIST_data/train-labels-idx1-ubyte.gz\nExtracting MNIST_data/t10k-images-idx3-ubyte.gz\nExtracting MNIST_data/t10k-labels-idx1-ubyte.gz\n"
+      },
+      "dateCreated": "May 20, 2017 3:24:25 AM",
+      "dateStarted": "May 21, 2017 12:18:41 AM",
+      "dateFinished": "May 21, 2017 12:18:42 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Train and Test the model",
+      "text": "%pyspark\n# Train\nfor _ in range(1000):\n    batch_xs, batch_ys \u003d mnist.train.next_batch(100)\n    sess.run(train_step, feed_dict\u003d{x: batch_xs, y_: batch_ys})\n\n# Test trained model and check for accurancy\ncorrect_prediction \u003d tf.equal(tf.argmax(y, 1), tf.argmax(y_, 1))\naccuracy \u003d tf.reduce_mean(tf.cast(correct_prediction, tf.float32))\nprint(sess.run(accuracy, feed_dict\u003d{x: mnist.test.images,\n                                      y_: mnist.test.labels}))\n",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 21, 2017 3:46:29 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "tableHide": false,
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495321360615_-1585061929",
+      "id": "20170520-230240_1531525960",
+      "result": {
+        "code": "ERROR",
+        "type": "TEXT",
+        "msg": "Traceback (most recent call last):\n  File \"/tmp/zeppelin_pyspark.py\", line 253, in \u003cmodule\u003e\n    eval(compiledCode)\n  File \"\u003cstring\u003e\", line 2, in \u003cmodule\u003e\nNameError: name \u0027mnist\u0027 is not defined\n"
+      },
+      "dateCreated": "May 20, 2017 11:02:40 PM",
+      "dateStarted": "May 21, 2017 3:46:04 AM",
+      "dateFinished": "May 21, 2017 3:46:35 AM",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n**Finally the accuracy on the test is about 90.6%. What can we do to increase accuracy?**\n",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 21, 2017 3:45:36 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495326448896_-1226409797",
+      "id": "20170521-002728_1047319081",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003cp\u003e\u003cstrong\u003eFinally the accuracy on the test is about 90.6%. What can we do to increase accuracy?\u003c/strong\u003e\u003c/p\u003e\n"
+      },
+      "dateCreated": "May 21, 2017 12:27:28 AM",
+      "dateStarted": "May 21, 2017 3:45:34 AM",
+      "dateFinished": "May 21, 2017 3:45:34 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495338331516_-1048979037",
+      "id": "20170521-034531_1632377357",
+      "dateCreated": "May 21, 2017 3:45:31 AM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Simple_MNIST_Softmax",
+  "id": "9A96BW8EQB1495250321",
+  "angularObjects": {
+    "2CGJHK7F9314001495154604096": [],
+    "2CHP5KFXT314001495154604098": [],
+    "2CGD7416V314001495154604088": [],
+    "2CK3WZ7YJ314001495154727302": []
+  },
+  "config": {},
+  "info": {},
+  "source": "FCN"
+}
