@@ -1,7 +1,7 @@
 
 ## Welcome Deep Learning on Qubole Data Services
 
-Qubole is an Autonmous Data Platform built on Open Source Technology. Qubole makes Big Analytics Data Easy by enabling Analytics on Cloud **EASY**.
+Qubole is an Autonmous Data Platform built on Open Source Technology. Qubole makes Big Analytics on Cloud **EASY**.
 
 Artificial Intelligence brings actions closer to analysis, making business process truly self driving and not only self serving. It cuts the manual process of analysis to work directly on Actions. Whether it is Drones to Supply Chain, flying cars to smart environments. From environmental impact of reducing data center costs done by Deep Mind for Google, or making roads safer with Self Driving Cars used by NVIDIA, Google or Uber, making lives more prosperous.
 
