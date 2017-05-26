@@ -1,0 +1,201 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n### LSTM Text Generation\n\nThis is an example of LSTM Text generation.\n    Example script to generate text from Nietzsche\u0027s writings.\n    At least 20 epochs are required before the generated text\n    starts sounding coherent.\n    It is recommended to run this script on GPU, as recurrent\n    networks are quite computationally intensive.\n    If you try this script on new data, make sure your corpus\n    has at least ~100k characters. ~1M is better.\n\u003cbr/\u003e",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 26, 2017 8:50:28 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495831599235_1827887842",
+      "id": "20170526-204639_719558625",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eLSTM Text Generation\u003c/h3\u003e\n\u003cp\u003eThis is an example of LSTM Text generation\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eExample script to generate text from Nietzsche\u0027s writings.\nAt least 20 epochs are required before the generated text\nstarts sounding coherent.\nIt is recommended to run this script on GPU, as recurrent\nnetworks are quite computationally intensive.\nIf you try this script on new data, make sure your corpus\nhas at least ~100k characters. ~1M is better.\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e\u003cbr /\u003e\u003c/p\u003e\n"
+      },
+      "dateCreated": "May 26, 2017 8:46:39 PM",
+      "dateStarted": "May 26, 2017 8:50:11 PM",
+      "dateFinished": "May 26, 2017 8:50:11 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nfrom __future__ import print_function\nfrom keras.models import Sequential\nfrom keras.layers import Dense, Activation\nfrom keras.layers import LSTM\nfrom keras.optimizers import RMSprop\nfrom keras.utils.data_utils import get_file\nimport numpy as np\nimport random\nimport sys",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 26, 2017 8:50:52 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495831811799_84881735",
+      "id": "20170526-205011_701207836",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "Using TensorFlow backend.\nCouldn\u0027t import dot_parser, loading of dot files will not be possible.\n"
+      },
+      "dateCreated": "May 26, 2017 8:50:11 PM",
+      "dateStarted": "May 26, 2017 8:50:52 PM",
+      "dateFinished": "May 26, 2017 8:50:54 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\npath \u003d get_file(\u0027nietzsche.txt\u0027, origin\u003d\u0027https://s3.amazonaws.com/text-datasets/nietzsche.txt\u0027)\ntext \u003d open(path).read().lower()\nprint(\u0027corpus length:\u0027, len(text))",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 26, 2017 8:51:13 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495831852348_1760524492",
+      "id": "20170526-205052_1481617002",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "Downloading data from https://s3.amazonaws.com/text-datasets/nietzsche.txt\n(\u0027corpus length:\u0027, 600901)\n"
+      },
+      "dateCreated": "May 26, 2017 8:50:52 PM",
+      "dateStarted": "May 26, 2017 8:51:13 PM",
+      "dateFinished": "May 26, 2017 8:51:13 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nchars \u003d sorted(list(set(text)))\nprint(\u0027total chars:\u0027, len(chars))\nchar_indices \u003d dict((c, i) for i, c in enumerate(chars))\nindices_char \u003d dict((i, c) for i, c in enumerate(chars))\n",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 26, 2017 8:51:45 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495831873723_-656236592",
+      "id": "20170526-205113_915696571",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "(\u0027total chars:\u0027, 59)\n"
+      },
+      "dateCreated": "May 26, 2017 8:51:13 PM",
+      "dateStarted": "May 26, 2017 8:51:45 PM",
+      "dateFinished": "May 26, 2017 8:51:45 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n# cut the text in semi-redundant sequences of maxlen characters\nmaxlen \u003d 40\nstep \u003d 3\nsentences \u003d []\nnext_chars \u003d []\nfor i in range(0, len(text) - maxlen, step):\n    sentences.append(text[i: i + maxlen])\n    next_chars.append(text[i + maxlen])\nprint(\u0027nb sequences:\u0027, len(sentences))\n\nprint(\u0027Vectorization...\u0027)\nX \u003d np.zeros((len(sentences), maxlen, len(chars)), dtype\u003dnp.bool)\ny \u003d np.zeros((len(sentences), len(chars)), dtype\u003dnp.bool)\nfor i, sentence in enumerate(sentences):\n    for t, char in enumerate(sentence):\n        X[i, t, char_indices[char]] \u003d 1\n    y[i, char_indices[next_chars[i]]] \u003d 1\n\n\n# build the model: a single LSTM\nprint(\u0027Build model...\u0027)\nmodel \u003d Sequential()\nmodel.add(LSTM(128, input_shape\u003d(maxlen, len(chars))))\nmodel.add(Dense(len(chars)))\nmodel.add(Activation(\u0027softmax\u0027))\n\noptimizer \u003d RMSprop(lr\u003d0.01)\nmodel.compile(loss\u003d\u0027categorical_crossentropy\u0027, optimizer\u003doptimizer)\n\n\ndef sample(preds, temperature\u003d1.0):\n    # helper function to sample an index from a probability array\n    preds \u003d np.asarray(preds).astype(\u0027float64\u0027)\n    preds \u003d np.log(preds) / temperature\n    exp_preds \u003d np.exp(preds)\n    preds \u003d exp_preds / np.sum(exp_preds)\n    probas \u003d np.random.multinomial(1, preds, 1)\n    return np.argmax(probas)\n\n# train the model, output generated text after each iteration\nfor iteration in range(1, 60):\n    print()\n    print(\u0027-\u0027 * 50)\n    print(\u0027Iteration\u0027, iteration)\n    model.fit(X, y,\n              batch_size\u003d128,\n              epochs\u003d1)\n\n    start_index \u003d random.randint(0, len(text) - maxlen - 1)\n\n    for diversity in [0.2, 0.5, 1.0, 1.2]:\n        print()\n        print(\u0027----- diversity:\u0027, diversity)\n\n        generated \u003d \u0027\u0027\n        sentence \u003d text[start_index: start_index + maxlen]\n        generated +\u003d sentence\n        print(\u0027----- Generating with seed: \"\u0027 + sentence + \u0027\"\u0027)\n        sys.stdout.write(generated)\n\n        for i in range(400):\n            x \u003d np.zeros((1, maxlen, len(chars)))\n            for t, char in enumerate(sentence):\n                x[0, t, char_indices[char]] \u003d 1.\n\n            preds \u003d model.predict(x, verbose\u003d0)[0]\n            next_index \u003d sample(preds, diversity)\n            next_char \u003d indices_char[next_index]\n\n            generated +\u003d next_char\n            sentence \u003d sentence[1:] + next_char\n\n            sys.stdout.write(next_char)\n            sys.stdout.flush()\n        print()\n",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "May 26, 2017 8:52:15 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495831905595_-1511487424",
+      "id": "20170526-205145_79787695",
+      "dateCreated": "May 26, 2017 8:51:45 PM",
+      "dateStarted": "May 26, 2017 8:52:15 PM",
+      "dateFinished": "May 26, 2017 9:25:40 PM",
+      "status": "ERROR",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495831935086_250308438",
+      "id": "20170526-205215_768810283",
+      "dateCreated": "May 26, 2017 8:52:15 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Keras_text_generation",
+  "id": "JCBVF2W35N1495831596",
+  "angularObjects": {
+    "2CJ8754UBnull1494536943857:shared_process": [],
+    "2CFZMMCGSnull1494536943859:shared_process": [],
+    "2CGHCTR1Bnull1494536943865:shared_process": [],
+    "2CFNNGN5Bnull1494536943862:shared_process": []
+  },
+  "config": {
+    "isDashboard": false
+  },
+  "info": {},
+  "source": "FCN"
+}
