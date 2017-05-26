@@ -1,32 +1,32 @@
 
 ## Welcome Deep Learning on Qubole Data Services
 
-Qubole is an Autonmous Data Platform built on Apache Hadoop. Qubole makes Big Data Easy by enabling running Analytics on Cloud --EASY--.
+Qubole is an Autonmous Data Platform built on Open Source Technology. Qubole makes Big Analytics Data Easy by enabling Analytics on Cloud **EASY**.
 
-Artificial Intelligence brings actions closer to analysis, making business process truly self driving and not self serving. It cuts the manual process of analysis to work directly on Actions. Whether it is Drones to Supply Chain, flying cars to smart environments, Artificial Intelligence is here to change the face to humanity for ever. From environment impact of reducing data center costs done by Deep Mind for Google, to Self Driving Cars used by NVIDIA, Google or Uber, our lives are cgance and will be changed for ever.
+Artificial Intelligence brings actions closer to analysis, making business process truly self driving and not only self serving. It cuts the manual process of analysis to work directly on Actions. Whether it is Drones to Supply Chain, flying cars to smart environments. From environmental impact of reducing data center costs done by Deep Mind for Google, or making roads safer with Self Driving Cars used by NVIDIA, Google or Uber, making lives more prosperous.
 
-Cameras can now see, microphones can here and detect, text are understood. The phenomenon of AI has touched every aspect of media and news.
+Cameras can now see, microphones can here and detect, text are understood in context. Languages are understood, speech can be mimcked, art can be generated.
 
 ### Deep Learning
 
-With the recent discoveries in Activation Functions, cheap compute with (GPUs), there is an increasing demand to support AI and make AI the core of every product and innovation.
+With the recent discoveries in Activation Functions, cheap compute teraflops of compute with (GPUs), AI is moving into every part of our lives.
 
-The recent remark by Sundar Pichai from Google in 2017 Google I/O is a great example. Google has brought AI to every product.
-[Google Ai](https://google.ai/ "Google AI")
-
-### A quick Intro to Deep Learning
-
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=iF8dRePlPUo" target="_blank"><img src="http://img.youtube.com/vi/iF8dRePlPUo/0.jpg" 
-alt="Deep Learning by Google" width="580" height="400" border="10" /></a>
+The recent remark by Sundar Pichai from Google in 2017 Google I/O is a great example. Google is bringing AI to every product. Google has changed from Mobile First to AI First company.[Google Ai](https://google.ai/ "Google AI")
 
 ### Apache Zepplin Notebook
 
 In this section we take a humble approach and show you how you can leverage data to make Artificial Intelligent actions on your data. 
+
 - Build Smart Models
 - Take Actions
 
 This code base works with Qubole Data Service Platform. The modules are built on Zepplin Notebook which can be imported into your QDS environment.
 
+
+### A quick Intro to Deep Learning
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=iF8dRePlPUo" target="_blank"><img src="http://img.youtube.com/vi/iF8dRePlPUo/0.jpg" 
+alt="Deep Learning by Google" width="580" height="400" border="10" /></a>
 
 ### Repository
 
