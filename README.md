@@ -3,7 +3,7 @@
 
 Qubole is an Autonmous Data Platform built on Open Source Technology. Qubole makes Big Analytics on Cloud **EASY**.
 
-Artificial Intelligence brings actions closer to analysis, making business process truly self driving and not only self serving. It cuts the manual process of analysis to work directly on Actions. Whether it is Drones to Supply Chain, flying cars to smart environments. From environmental impact of reducing data center costs done by Deep Mind for Google, or making roads safer with Self Driving Cars used by NVIDIA, Google or Uber, making lives more prosperous.
+Artificial Intelligence brings actions closer to analysis, making business processes to be Autonmous. It cuts the manual process of analysis to work directly on Actions. Whether it is Drones to Supply Chain, flying cars to smart environments. From environmental impact of reducing data center costs done by Deep Mind for Google, or making roads safer with Self Driving Cars used by NVIDIA, Google or Uber, making lives more prosperous.
 
 Cameras can now see, microphones can here and detect, text are understood in context. Languages are understood, speech can be mimcked, art can be generated.
 
@@ -25,7 +25,7 @@ This code base works with Qubole Data Service Platform. The modules are built on
 
 ### A quick Intro to Deep Learning
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=iF8dRePlPUo" target="_blank"><img src="http://img.youtube.com/vi/iF8dRePlPUo/0.jpg" 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=iF8dRePlPUo&list=PLAwxTw4SYaPn_OWPFT9ulXLuQrImzHfOV" target="_blank"><img src="http://img.youtube.com/vi/iF8dRePlPUo/0.jpg" 
 alt="Deep Learning by Google" width="580" height="400" border="10" /></a>
 
 ### Repository
