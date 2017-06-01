@@ -7,13 +7,13 @@ Artificial Intelligence brings actions closer to analysis, making business proce
 
 Environmental impact of reducing data center Energy Usage done by Deep Mind for Google, or making roads safer with Self Driving Cars used by NVIDIA, Google or Uber, deep learning is making everyday life better.
 
-Cameras can now see, microphones can here and detect, text are understood in context. Languages are understood, speech can be mimcked, art can be generated. Global communications are no longer restricted by language boundaries, Google's machine translation has got human level accuracy in last 6 months.
+Cameras can now see, microphones can hear and detect, text are understood in context. Languages are understood, speech can be mimcked, art can be generated. Global communications are no longer restricted by language boundaries, Google's machine translation has got human level accuracy in last 6 months.
 
 ### Deep Learning
 
 Deep Learning is at the center of AI. With the recent discoveries in Activation Functions, cheap compute at teraflops scale with (GPUs), AI is moving into every part of our lives.
 
-The recent remark by Sundar Pichai from Google in 2017 Google I/O is a great example. Google is bringing AI to every product. Google has changed from Mobile First to AI First company.[Google Ai](https://google.ai/ "Google AI")
+The recent remark by Sundar Pichai from Google in 2017 Google I/O is a great example. Google is bringing AI to every product. Google has changed from Mobile First to AI First company. Google Launched [Google.Ai](https://google.ai/ "Google AI") in I/O 17. Amazon, Microsoft, Facebook are all in the rush for the AI power race.
 
 ### Apache Zepplin Notebook
 
