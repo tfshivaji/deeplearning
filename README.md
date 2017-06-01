@@ -3,22 +3,24 @@
 
 Qubole is an Autonmous Data Platform built on Open Source Technology. Qubole makes Big Analytics on Cloud **EASY**.
 
-Artificial Intelligence brings actions closer to analysis, making business processes to be Autonmous. It cuts the manual process of analysis to work directly on Actions. Whether it is Drones to Supply Chain, flying cars to smart environments. From environmental impact of reducing data center costs done by Deep Mind for Google, or making roads safer with Self Driving Cars used by NVIDIA, Google or Uber, making lives more prosperous.
+Artificial Intelligence brings actions closer to analysis, making business processes to be Autonmous. It cuts the manual process of analysis to work directly with Actions. From drones to supply Chain, flying cars to smart environments, artificial intelligence is changing every step of our lives. 
 
-Cameras can now see, microphones can here and detect, text are understood in context. Languages are understood, speech can be mimcked, art can be generated.
+Environmental impact of reducing data center Energy Usage done by Deep Mind for Google, or making roads safer with Self Driving Cars used by NVIDIA, Google or Uber, deep learning is making everyday life better.
+
+Cameras can now see, microphones can here and detect, text are understood in context. Languages are understood, speech can be mimcked, art can be generated. Global communications are no longer restricted by language boundaries, Google's machine translation has got human level accuracy in last 6 months.
 
 ### Deep Learning
 
-With the recent discoveries in Activation Functions, cheap compute teraflops of compute with (GPUs), AI is moving into every part of our lives.
+Deep Learning is at the center of AI. With the recent discoveries in Activation Functions, cheap compute at teraflops scale with (GPUs), AI is moving into every part of our lives.
 
 The recent remark by Sundar Pichai from Google in 2017 Google I/O is a great example. Google is bringing AI to every product. Google has changed from Mobile First to AI First company.[Google Ai](https://google.ai/ "Google AI")
 
 ### Apache Zepplin Notebook
 
-In this section we take a humble approach and show you how you can leverage data to make Artificial Intelligent actions on your data. 
+In this section we take a humble approach and show you how you can leverage data to use the power of DeepLearning on data stored in QDS. 
 
 - Build Smart Models
-- Take Actions
+- Take Smart Actions
 
 This code base works with Qubole Data Service Platform. The modules are built on Zepplin Notebook which can be imported into your QDS environment.
 
@@ -30,10 +32,9 @@ alt="Deep Learning by Google" width="580" height="400" border="10" /></a>
 
 ### Repository
 
-The **Aim** of these notebooks is to give you an introduction to the Tensorflow and Keras libraries and give you how you could use them on your uses cases. At Qubole the plan is to enable customers with Deep Learning capabilities. This repository is for sample code and to get started on QDS with deep learning capabilities. 
+The **Aim** of these notebooks is to give you an introduction to the Tensorflow and Keras libraries. It gives you. At Qubole the plan is to enable customers with Deep Learning capabilities. This repository is for sample code and to setup and get started on QDS with Zepplin Notebooks. 
 
 
-- Start with the **Hello World** examples in the tensorflow folder
 
 
 The github repo provides details on the samples.
@@ -44,6 +45,12 @@ The github repo provides details on the samples.
 	startup_scripts - These are QDS startup scripts
 
 
+```
+- Use the startup scripts to change the bootstrap that will install the needed libraries
+- Start with 
+```
+	tensorflow/Tensorflow_Hello_World
+	tensorflow/Tensorflow_Hello_World_Part2
 ```
 
 Notebooks - These are Zepplin Notebooks. You can directly import them by linking from Qubole Github link.
