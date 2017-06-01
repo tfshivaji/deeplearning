@@ -3,7 +3,7 @@
 
 Qubole is an Autonmous Data Platform built on Open Source Technology. Qubole makes Big Analytics on Cloud **EASY**.
 
-Artificial Intelligence brings actions closer to analysis, making business processes to be Autonmous. It cuts the manual process of analysis to work directly with Actions. From drones to supply Chain, flying cars to smart environments, artificial intelligence is changing every step of our lives. 
+Artificial Intelligence brings actions closer to analysis, making business processes to be Autonmous. It cuts the manual process of analysis to work directly with Actions. From drones to supply chain, flying cars to smart environments, artificial intelligence is changing every step of our lives. 
 
 Environmental impact of reducing data center Energy Usage done by Deep Mind for Google, or making roads safer with Self Driving Cars used by NVIDIA, Google or Uber, deep learning is making everyday life better.
 
