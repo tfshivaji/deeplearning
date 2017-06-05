@@ -1,6 +1,6 @@
 ### Install on Single Node Cluster
 
-In this section we will discusse how to Enable Tensorflow on a single node cluster
+In this section we will discuss how to Enable Tensorflow on a single node cluster
 
 QDS provide "bootstrap" to install new libararies via the BootStrap section.
 
