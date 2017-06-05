@@ -24,7 +24,7 @@ Add the following to script area:
 	pip install graphviz
 	
 As shown in the image.	
-![Add pip install libraries](https://github.com/tfshivaji/deeplearning/blob/master/images/EditBootStrp02.png)
+![Add pip install libraries](https://github.com/tfshivaji/deeplearning/blob/master/images/EditBootStrap02.png)
 
 Save and Start/Restart the Cluster.
 
