@@ -1,4 +1,4 @@
-### Install on Single Node Cluster
+### Install on Tensorflow Single Node Cluster
 
 In this section we will discuss how to Enable Tensorflow on a single node cluster
 
@@ -26,6 +26,6 @@ Add the following to script area:
 As shown in the image.	
 ![Add pip install libraries](https://github.com/tfshivaji/deeplearning/blob/master/images/EditBootStrap02.png)
 
-Save and Start/Restart the Cluster.
+Save and **Start/Restart** the Cluster.
 
-Watch the "Cluster Startup Logs" for any errors.
+Watch the ***"Cluster Startup Logs"*** for any errors.
