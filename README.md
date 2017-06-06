@@ -32,19 +32,15 @@ alt="Deep Learning by Google" width="580" height="400" border="10" /></a>
 
 ### Repository
 
-The **Aim** of these notebooks is to give you an introduction to the Tensorflow and Keras libraries. It gives you. At Qubole the plan is to enable customers with Deep Learning capabilities. This repository is for sample code and to setup and get started on QDS with Zepplin Notebooks. 
+The **aim** of these notebooks is to give you an introduction to the Tensorflow and Keras libraries. It gives you. At Qubole the plan is to enable customers with Deep Learning capabilities. This repository is for sample code and to setup and get started on QDS with Zepplin Notebooks. 
 
 
-
-
-The github repo provides details on the samples.
+The github repo provides details on the samples. 
 
 ```
 	tensorflow - Contains code for tensorflow
-	mxmet - Contains sample code for Apache Mxnet
 	startup_scripts - These are QDS startup scripts
-
-
+	
 ```
 - Use the startup scripts to change the bootstrap that will install the needed libraries
 - Start with 
