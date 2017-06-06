@@ -57,4 +57,4 @@ Notebooks - These are Zepplin Notebooks. You can directly import them by linking
 The details on the documentation for QDS and Zepplin can be found here - [QDS Zepplin](http://docs.qubole.com/en/latest/user-guide/features/notebook/link-notebook-github.html)
 
 ### Support or Contact
-Please contact sdutta@qubole.com for the above work
+Please contact shivaji@aurius.io for the above work
