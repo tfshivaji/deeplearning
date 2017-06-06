@@ -2,9 +2,9 @@
   "paragraphs": [
     {
       "title": "",
-      "text": "%md\n### Getting Started\nThis guide gets you started programming in TensorFlow. Before using this guide, install TensorFlow. To get the most out of this guide, you should know the following:\n* **How to program in Python**\n* **At least a little bit about arrays.**\n*  **Ideally, something about machine learning.**\n\nHowever, if you know little or nothing about machine learning, then this is still the first guide you should read.\n* TensorFlow provides multiple APIs. \n The lowest level API--TensorFlow Core-- provides you with complete programming control. We recommend TensorFlow Core for machine learning researchers and others who require fine levels of control over their models. \n\n* The higher level APIs are built on top of TensorFlow Core. These higher level APIs are typically easier to learn and use than TensorFlow Core. In addition, the higher level APIs make repetitive tasks easier and more consistent between different users. A high-level API like tf.contrib.learn helps you manage data sets, estimators, training and inference. \n** Note that a few of the high-level TensorFlow APIs--those whose method names contain contrib-- are still in development. It is possible that some contrib methods will change or become obsolete in subsequent TensorFlow releases.\n\nThis guide begins with a tutorial on **TensorFlow Core**. Later, we demonstrate how to implement the same model in **tf.contrib.learn**. Knowing TensorFlow Core principles will give you a great mental model of how things are working internally when you use the more compact higher level API.\n\u003cbr/\u003e\n",
+      "text": "%md\n### Getting Started\nThis guide gets you started programming in TensorFlow.This notebook assumes that you have a cluster that has tensorflow already installed. For more details on installation, check the [install guide](https://github.com/tfshivaji/deeplearning/blob/master/Install.md).  To get the most out of this guide, you should know the following:\n* **How to program in Python**\n* **At least a little bit about arrays.**\n*  **Ideally, something about machine learning.**\n\nHowever, if you know little or nothing about machine learning, then this is still the first guide you should read.\n* TensorFlow provides multiple APIs. \n The lowest level API--TensorFlow Core-- provides you with complete programming control. We recommend TensorFlow Core for machine learning researchers and others who require fine levels of control over their models. \n\n* The higher level APIs are built on top of TensorFlow Core. These higher level APIs are typically easier to learn and use than TensorFlow Core. In addition, the higher level APIs make repetitive tasks easier and more consistent between different users. A high-level API like tf.contrib.learn helps you manage data sets, estimators, training and inference. \n** Note that a few of the high-level TensorFlow APIs--those whose method names contain contrib-- are still in development. It is possible that some contrib methods will change or become obsolete in subsequent TensorFlow releases.\n\nThis guide begins with a tutorial on **TensorFlow Core**. Later, we demonstrate how to implement the same model in **tf.contrib.learn**. Knowing TensorFlow Core principles will give you a great mental model of how things are working internally when you use the more compact higher level API.\n\u003cbr/\u003e\n",
       "user": "sdutta@qubole.com",
-      "dateUpdated": "May 18, 2017 11:11:35 PM",
+      "dateUpdated": "Jun 6, 2017 5:53:14 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -31,11 +31,11 @@
       "result": {
         "code": "SUCCESS",
         "type": "HTML",
-        "msg": "\u003ch3\u003eGetting Started\u003c/h3\u003e\n\u003cp\u003eThis guide gets you started programming in TensorFlow. Before using this guide, install TensorFlow. To get the most out of this guide, you should know the following:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003eHow to program in Python\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eAt least a little bit about arrays.\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eIdeally, something about machine learning.\u003c/strong\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eHowever, if you know little or nothing about machine learning, then this is still the first guide you should read.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cp\u003eTensorFlow provides multiple APIs.\n\u003cbr  /\u003eThe lowest level API\u0026ndash;TensorFlow Core\u0026ndash; provides you with complete programming control. We recommend TensorFlow Core for machine learning researchers and others who require fine levels of control over their models.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eThe higher level APIs are built on top of TensorFlow Core. These higher level APIs are typically easier to learn and use than TensorFlow Core. In addition, the higher level APIs make repetitive tasks easier and more consistent between different users. A high-level API like tf.contrib.learn helps you manage data sets, estimators, training and inference.\n\u003cbr  /\u003e** Note that a few of the high-level TensorFlow APIs\u0026ndash;those whose method names contain contrib\u0026ndash; are still in development. It is possible that some contrib methods will change or become obsolete in subsequent TensorFlow releases.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eThis guide begins with a tutorial on \u003cstrong\u003eTensorFlow Core\u003c/strong\u003e. Later, we demonstrate how to implement the same model in \u003cstrong\u003etf.contrib.learn\u003c/strong\u003e. Knowing TensorFlow Core principles will give you a great mental model of how things are working internally when you use the more compact higher level API.\n\u003cbr  /\u003e\u003cbr /\u003e\u003c/p\u003e\n"
+        "msg": "\u003ch3\u003eGetting Started\u003c/h3\u003e\n\u003cp\u003eThis guide gets you started programming in TensorFlow.This notebook assumes that you have a cluster that has tensorflow already installed. For more details on installation, check the \u003ca href\u003d\"https://github.com/tfshivaji/deeplearning/blob/master/Install.md\"\u003einstall guide\u003c/a\u003e.  To get the most out of this guide, you should know the following:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003eHow to program in Python\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eAt least a little bit about arrays.\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eIdeally, something about machine learning.\u003c/strong\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eHowever, if you know little or nothing about machine learning, then this is still the first guide you should read.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cp\u003eTensorFlow provides multiple APIs.\n\u003cbr  /\u003eThe lowest level API\u0026ndash;TensorFlow Core\u0026ndash; provides you with complete programming control. We recommend TensorFlow Core for machine learning researchers and others who require fine levels of control over their models.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eThe higher level APIs are built on top of TensorFlow Core. These higher level APIs are typically easier to learn and use than TensorFlow Core. In addition, the higher level APIs make repetitive tasks easier and more consistent between different users. A high-level API like tf.contrib.learn helps you manage data sets, estimators, training and inference.\n\u003cbr  /\u003e** Note that a few of the high-level TensorFlow APIs\u0026ndash;those whose method names contain contrib\u0026ndash; are still in development. It is possible that some contrib methods will change or become obsolete in subsequent TensorFlow releases.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eThis guide begins with a tutorial on \u003cstrong\u003eTensorFlow Core\u003c/strong\u003e. Later, we demonstrate how to implement the same model in \u003cstrong\u003etf.contrib.learn\u003c/strong\u003e. Knowing TensorFlow Core principles will give you a great mental model of how things are working internally when you use the more compact higher level API.\n\u003cbr  /\u003e\u003cbr /\u003e\u003c/p\u003e\n"
       },
       "dateCreated": "May 18, 2017 10:12:07 PM",
-      "dateStarted": "May 18, 2017 10:55:46 PM",
-      "dateFinished": "May 18, 2017 10:55:46 PM",
+      "dateStarted": "Jun 6, 2017 5:53:08 AM",
+      "dateFinished": "Jun 6, 2017 5:53:08 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -78,7 +78,7 @@
     {
       "text": "%md \n#### TensorFlow Core tutorial\nThe canonical import statement for TensorFlow programs is as follow.\n\n    import tensorflow as tf\n\nThis gives Python access to all of TensorFlow\u0027s classes, methods, and symbols.\n\n",
       "user": "sdutta@qubole.com",
-      "dateUpdated": "May 18, 2017 11:09:51 PM",
+      "dateUpdated": "Jun 1, 2017 7:40:11 PM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -92,7 +92,7 @@
         },
         "enabled": true,
         "editorMode": "ace/mode/markdown",
-        "editorHide": false
+        "editorHide": true
       },
       "settings": {
         "params": {},
@@ -149,8 +149,8 @@
     },
     {
       "text": "%pyspark\nimport tensorflow as tf\n\nnode1 \u003d tf.constant(3.0, tf.float32)\nnode2 \u003d tf.constant(4.0) # also tf.float32 implicitly\nprint(node1, node2)",
-      "user": "sdutta@qubole.com",
-      "dateUpdated": "May 19, 2017 12:53:07 AM",
+      "user": "dleybzon@qubole.com",
+      "dateUpdated": "Jun 6, 2017 4:22:39 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -178,8 +178,8 @@
         "msg": "(\u003ctf.Tensor \u0027Const:0\u0027 shape\u003d() dtype\u003dfloat32\u003e, \u003ctf.Tensor \u0027Const_1:0\u0027 shape\u003d() dtype\u003dfloat32\u003e)\n"
       },
       "dateCreated": "May 18, 2017 10:36:15 PM",
-      "dateStarted": "May 19, 2017 12:53:07 AM",
-      "dateFinished": "May 19, 2017 12:53:09 AM",
+      "dateStarted": "Jun 6, 2017 4:22:39 AM",
+      "dateFinished": "Jun 6, 2017 4:23:12 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -221,8 +221,8 @@
     },
     {
       "text": "%pyspark\n\nsess \u003d tf.Session()",
-      "user": "sdutta@qubole.com",
-      "dateUpdated": "May 18, 2017 11:19:08 PM",
+      "user": "dleybzon@qubole.com",
+      "dateUpdated": "Jun 6, 2017 4:23:55 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -246,18 +246,18 @@
       "result": {
         "code": "SUCCESS",
         "type": "TEXT",
-        "msg": "2017-05-18 23:19:08.967611: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn\u0027t compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.\n2017-05-18 23:19:08.967642: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn\u0027t compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.\n2017-05-18 23:19:08.967654: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn\u0027t compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.\n"
+        "msg": "2017-06-06 04:23:55.208063: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn\u0027t compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.\n2017-06-06 04:23:55.208095: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn\u0027t compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.\n2017-06-06 04:23:55.208102: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn\u0027t compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.\n"
       },
       "dateCreated": "May 18, 2017 11:15:24 PM",
-      "dateStarted": "May 18, 2017 11:19:08 PM",
-      "dateFinished": "May 18, 2017 11:19:08 PM",
+      "dateStarted": "Jun 6, 2017 4:23:55 AM",
+      "dateFinished": "Jun 6, 2017 4:23:55 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\nBelow code:\n    \n    sess \u003d tf.Session()\n\nCreates a Session Object to be able to run on the CPU or GPU. If you are running of the GPU you should see a bunch of print statements related to this. Later we will cover how the CPU and the GPU sections are split.",
       "user": "sdutta@qubole.com",
-      "dateUpdated": "May 18, 2017 11:25:01 PM",
+      "dateUpdated": "Jun 1, 2017 7:40:27 PM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -271,7 +271,7 @@
         },
         "enabled": true,
         "editorMode": "ace/mode/markdown",
-        "editorHide": false
+        "editorHide": true
       },
       "settings": {
         "params": {},
@@ -400,7 +400,7 @@
     {
       "text": "%pyspark\n\nnode3 \u003d tf.add(node1, node2)\nprint (sess.run([node3]))",
       "user": "sdutta@qubole.com",
-      "dateUpdated": "May 18, 2017 11:30:46 PM",
+      "dateUpdated": "Jun 1, 2017 7:40:34 PM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -427,15 +427,15 @@
         "msg": "[7.0]\n"
       },
       "dateCreated": "May 18, 2017 11:30:16 PM",
-      "dateStarted": "May 18, 2017 11:30:46 PM",
-      "dateFinished": "May 18, 2017 11:30:46 PM",
+      "dateStarted": "Jun 1, 2017 7:40:35 PM",
+      "dateFinished": "Jun 1, 2017 7:40:35 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\nBelow is a visualization of the graph.\n![Tensorboard](https://www.tensorflow.org/images/getting_started_add.png)",
-      "user": "sdutta@qubole.com",
-      "dateUpdated": "May 18, 2017 11:34:21 PM",
+      "user": "dleybzon@qubole.com",
+      "dateUpdated": "Jun 6, 2017 4:30:28 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -507,7 +507,7 @@
     {
       "text": "%pyspark\n\n# This is actual code execution\n# Below we define two placeholders\na \u003d tf.placeholder(tf.float32)\nb \u003d tf.placeholder(tf.float32)\nadder_node \u003d tf.add(a,b)\n\n#Create a session\nsess \u003d tf.Session()\n\n#Execute the sessions\n\nprint(sess.run(adder_node, {a: 3, b:4.5}))\nprint(sess.run(adder_node, {a: [1,3], b: [2, 4]}))\n",
       "user": "sdutta@qubole.com",
-      "dateUpdated": "May 18, 2017 11:48:13 PM",
+      "dateUpdated": "Jun 1, 2017 7:40:40 PM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -534,8 +534,8 @@
         "msg": "7.5\n[ 3.  7.]\n"
       },
       "dateCreated": "May 18, 2017 11:45:38 PM",
-      "dateStarted": "May 18, 2017 11:47:54 PM",
-      "dateFinished": "May 18, 2017 11:47:54 PM",
+      "dateStarted": "Jun 1, 2017 7:40:40 PM",
+      "dateFinished": "Jun 1, 2017 7:40:40 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -663,10 +663,12 @@
   "name": "Tensorflow_Hello_World",
   "id": "XBXXZBC9UW1495148763",
   "angularObjects": {
-    "2CGJHK7F9314001495154604096": [],
-    "2CHP5KFXT314001495154604098": [],
-    "2CGD7416V314001495154604088": [],
-    "2CK3WZ7YJ314001495154727302": []
+    "2CM1JCVFW314001496703088191": [],
+    "2CMCZ7CU4314001496722959019": [],
+    "2CKMZUNE1314001495477397192": [],
+    "2CJT8UR78314001495477400581": [],
+    "2CH5WN8SA314001495477397198": [],
+    "2CG13NBD4314001495477397195": []
   },
   "config": {
     "looknfeel": "default"
