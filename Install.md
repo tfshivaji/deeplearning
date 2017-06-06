@@ -30,4 +30,4 @@ Save and **Start/Restart** the Cluster.
 
 Watch the ***"Cluster Startup Logs"*** for any errors.
 
-[<< Return][https://github.com/tfshivaji/deeplearning] 
+[<<return](https://github.com/tfshivaji/deeplearning) 
