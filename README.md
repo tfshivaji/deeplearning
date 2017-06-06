@@ -13,14 +13,14 @@ Cameras can now see, microphones can hear and detect, text are understood in con
 
 Deep Learning is at the center of AI. With the recent discoveries in Activation Functions, cheap compute at teraflops scale with (GPUs), AI is moving into every part of our lives.
 
-The recent remark by Sundar Pichai from Google in 2017 Google I/O is a great example. Google is bringing AI to every product. Google has changed from Mobile First to AI First company. Google Launched [Google.Ai](https://google.ai/ "Google AI") in I/O 17. Amazon, Microsoft, Facebook are all in the rush for the AI power race.
+### Tensorflow Install on QDS
+
+Folw the [Install Guide](https://github.com/tfshivaji/deeplearning/blob/master/Install.md) to setup your cluster with Tensorflow and related libraries.
 
 ### Apache Zepplin Notebook
 
 In this section we take a humble approach and show you how you can leverage data to use the power of DeepLearning on data stored in QDS. 
 
-- Build Smart Models
-- Take Smart Actions
 
 This code base works with Qubole Data Service Platform. The modules are built on Zepplin Notebook which can be imported into your QDS environment.
 
