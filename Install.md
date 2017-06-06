@@ -30,4 +30,8 @@ Save and **Start/Restart** the Cluster.
 
 Watch the ***"Cluster Startup Logs"*** for any errors.
 
+### Future work 
+
+Tensorflow comes with [tensorboard](https://www.tensorflow.org/get_started/summaries_and_tensorboard). Tensorboard will work with tensorflow. Please work with your AWS admin to open the ports for tensorboard. Please follow the tensorflow documentation on how to run tensorboard. 
+
 [<<return](https://github.com/tfshivaji/deeplearning) 
