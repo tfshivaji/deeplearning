@@ -114,7 +114,7 @@
     {
       "text": "%md\n#### The Computational Graph\n\nYou might think of TensorFlow Core programs as consisting of two discrete sections:\n\n* Building the computational graph.\n* Running the computational graph.\n\nA computational graph is a series of TensorFlow operations arranged into a graph of nodes. Let\u0027s build a simple computational graph. Each node takes zero or more tensors as inputs and produces a tensor as an output. One type of node is a constant. Like all TensorFlow constants, it takes no inputs, and it outputs a value it stores internally.  We can create two floating point Tensors node1 and node2 as follows:\n\n    node1 \u003d tf.constant(3.0, tf.float32)\n    node2 \u003d tf.constant(4.0) # also tf.float32 implicitly\n    print(node1, node2)\n\nIn the above tf.constant, takes 2 attributes (value and datatype). The [tf.float32](https://www.tensorflow.org/programmers_guide/dims_types) is 32 bit floating data type used in the above example. In the next section we will execute the first example of code. We will print the **node1** and **node2**.\n\n\u003cb/\u003e",
       "user": "sdutta@qubole.com",
-      "dateUpdated": "Jun 6, 2017 6:01:32 AM",
+      "dateUpdated": "Jun 6, 2017 6:02:05 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -128,7 +128,7 @@
         },
         "enabled": true,
         "editorMode": "ace/mode/markdown",
-        "editorHide": false
+        "editorHide": true
       },
       "settings": {
         "params": {},
@@ -220,6 +220,42 @@
       "progressUpdateIntervalMs": 500
     },
     {
+      "text": "%md\nBelow code:\n    \n    sess \u003d tf.Session()\n\nCreates a Session Object to be able to run on the CPU or GPU. If you are running of the GPU you should see a bunch of print statements related to this. Later we will cover how the CPU and the GPU sections are split.",
+      "user": "sdutta@qubole.com",
+      "dateUpdated": "Jun 6, 2017 6:04:19 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1495149548940_-1986207196",
+      "id": "20170518-231908_1199179499",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003cp\u003eBelow code:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003esess \u003d tf.Session()\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eCreates a Session Object to be able to run on the CPU or GPU. If you are running of the GPU you should see a bunch of print statements related to this. Later we will cover how the CPU and the GPU sections are split.\u003c/p\u003e\n"
+      },
+      "dateCreated": "May 18, 2017 11:19:08 PM",
+      "dateStarted": "May 18, 2017 11:21:09 PM",
+      "dateFinished": "May 18, 2017 11:21:09 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
       "text": "%pyspark\n\nsess \u003d tf.Session()",
       "user": "dleybzon@qubole.com",
       "dateUpdated": "Jun 6, 2017 4:23:55 AM",
@@ -251,42 +287,6 @@
       "dateCreated": "May 18, 2017 11:15:24 PM",
       "dateStarted": "Jun 6, 2017 4:23:55 AM",
       "dateFinished": "Jun 6, 2017 4:23:55 AM",
-      "status": "FINISHED",
-      "progressUpdateIntervalMs": 500
-    },
-    {
-      "text": "%md\nBelow code:\n    \n    sess \u003d tf.Session()\n\nCreates a Session Object to be able to run on the CPU or GPU. If you are running of the GPU you should see a bunch of print statements related to this. Later we will cover how the CPU and the GPU sections are split.",
-      "user": "sdutta@qubole.com",
-      "dateUpdated": "Jun 1, 2017 7:40:27 PM",
-      "config": {
-        "colWidth": 12.0,
-        "graph": {
-          "mode": "table",
-          "height": 300.0,
-          "optionOpen": false,
-          "keys": [],
-          "values": [],
-          "groups": [],
-          "scatter": {}
-        },
-        "enabled": true,
-        "editorMode": "ace/mode/markdown",
-        "editorHide": true
-      },
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "jobName": "paragraph_1495149548940_-1986207196",
-      "id": "20170518-231908_1199179499",
-      "result": {
-        "code": "SUCCESS",
-        "type": "HTML",
-        "msg": "\u003cp\u003eBelow code:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003esess \u003d tf.Session()\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eCreates a Session Object to be able to run on the CPU or GPU. If you are running of the GPU you should see a bunch of print statements related to this. Later we will cover how the CPU and the GPU sections are split.\u003c/p\u003e\n"
-      },
-      "dateCreated": "May 18, 2017 11:19:08 PM",
-      "dateStarted": "May 18, 2017 11:21:09 PM",
-      "dateFinished": "May 18, 2017 11:21:09 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
