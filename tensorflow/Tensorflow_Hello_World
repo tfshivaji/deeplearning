@@ -612,9 +612,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\nPlease follow the examples from Github",
+      "text": "%md\nPlease follow the examples from Github. The next tutorail to tryout would [Tensorflow Hello World Part 2](https://github.com/tfshivaji/deeplearning/blob/master/tensorflow/Tensorflow_Hello_World_Part2)",
       "user": "sdutta@qubole.com",
-      "dateUpdated": "May 19, 2017 1:24:37 AM",
+      "dateUpdated": "Jun 6, 2017 6:05:51 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -628,7 +628,7 @@
         },
         "enabled": true,
         "editorMode": "ace/mode/markdown",
-        "editorHide": true
+        "editorHide": false
       },
       "settings": {
         "params": {},
@@ -639,11 +639,11 @@
       "result": {
         "code": "SUCCESS",
         "type": "HTML",
-        "msg": "\u003cp\u003ePlease follow the examples from Github\u003c/p\u003e\n"
+        "msg": "\u003cp\u003ePlease follow the examples from Github. The next tutorail to tryout would \u003ca href\u003d\"https://github.com/tfshivaji/deeplearning/blob/master/tensorflow/Tensorflow_Hello_World_Part2\"\u003eTensorflow Hello World Part 2\u003c/a\u003e\u003c/p\u003e\n"
       },
       "dateCreated": "May 19, 2017 1:23:27 AM",
-      "dateStarted": "May 19, 2017 1:24:35 AM",
-      "dateFinished": "May 19, 2017 1:24:35 AM",
+      "dateStarted": "Jun 6, 2017 6:05:51 AM",
+      "dateFinished": "Jun 6, 2017 6:05:51 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
