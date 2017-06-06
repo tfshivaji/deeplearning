@@ -1,3 +1,7 @@
+### Overview
+
+This is work in progress. The idea is to use Kubernetes for distributed Tensorflow.
+
 ### Install Kubernetes
 
 [Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/)
