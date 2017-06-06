@@ -58,3 +58,6 @@ The details on the documentation for QDS and Zepplin can be found here - [QDS Ze
 
 ### Support or Contact
 Please contact shivaji@aurius.io for the above work
+
+### Known Issues
+There is a known issue with using matplotlib on the Zepplin Notebook. The backend used by default is "TKAgg". This needs to be changed to "agg".
