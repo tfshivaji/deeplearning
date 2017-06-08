@@ -1,6 +1,6 @@
 ### Install on Tensorflow Single Node Cluster
 
-In this section we will discuss how to Enable Tensorflow on a single node cluster
+In this section we will discuss how to install Tensorflow on a single node cluster using Pypi.
 
 QDS provide "bootstrap" to install new libararies via the BootStrap section.
 
