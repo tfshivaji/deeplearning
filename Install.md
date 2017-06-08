@@ -24,6 +24,8 @@ Add the following to script area:
 	pip install pyparsing
 	pip install graphviz
 	
+The list of scripts are detailed in the [startup_scripts](/startup_scripts) folder.
+
 As shown in the image.	
 ![Add pip install libraries](https://github.com/tfshivaji/deeplearning/blob/master/images/EditBootStrap02.png)
 
