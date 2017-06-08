@@ -1,11 +1,12 @@
 ### Install on Tensorflow Single Node Cluster
 
-In this section we will discuss how to Enable Tensorflow on a single node cluster
+In this section we will discuss how to install Tensorflow on a single node cluster using Pypi.
 
-QDS provide "bootstrap" to install new libararies via the BootStrap section.
+QDS provide "bootstrap" to install new libraries via the BootStrap section.
 
 Navigate to the Clusters tab on the QDS Console
-![Console](./images/Screen%20Shot%202017-06-05%20at%203.13.36%20PM.png)
+<br/>
+<img src="/images/Screen%20Shot%202017-06-05%20at%203.13.36%20PM.png" height="300" width="300"></img>
 
 Click on the "Edit Node Bootstrap" link
 ![Edit BootStrap](https://github.com/tfshivaji/deeplearning/blob/master/images/EditBootStrp01.png)
@@ -23,6 +24,8 @@ Add the following to script area:
 	pip install pyparsing
 	pip install graphviz
 	
+The list of scripts are detailed in the [startup_scripts](/startup_scripts) folder.
+
 As shown in the image.	
 ![Add pip install libraries](https://github.com/tfshivaji/deeplearning/blob/master/images/EditBootStrap02.png)
 
