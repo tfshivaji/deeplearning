@@ -2,7 +2,7 @@
 
 In this section we will discuss how to install Tensorflow on a single node cluster using Pypi.
 
-QDS provide "bootstrap" to install new libararies via the BootStrap section.
+QDS provide "bootstrap" to install new libraries via the BootStrap section.
 
 Navigate to the Clusters tab on the QDS Console
 <br/>
