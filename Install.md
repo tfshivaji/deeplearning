@@ -5,7 +5,7 @@ In this section we will discuss how to Enable Tensorflow on a single node cluste
 QDS provide "bootstrap" to install new libararies via the BootStrap section.
 
 Navigate to the Clusters tab on the QDS Console
-<img src="/images/Screen%20Shot%202017-06-05%20at%203.13.36%20PM.png"></img>
+<img src="/images/Screen%20Shot%202017-06-05%20at%203.13.36%20PM.png" height="42" width="42"></img>
 
 Click on the "Edit Node Bootstrap" link
 ![Edit BootStrap](https://github.com/tfshivaji/deeplearning/blob/master/images/EditBootStrp01.png)
