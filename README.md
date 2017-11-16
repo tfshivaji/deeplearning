@@ -1,7 +1,5 @@
 
-## Welcome Deep Learning on Qubole Data Services
-
-Qubole is an Autonmous Data Platform built on Open Source Technology. Qubole makes Big Analytics on Cloud **EASY**.
+## Deep Learning
 
 Artificial Intelligence brings actions closer to analysis, making business processes to be Autonmous. It cuts the manual process of analysis to work directly with Actions. From drones to supply chain, flying cars to smart environments, artificial intelligence is changing every step of our lives. 
 
@@ -19,10 +17,7 @@ Folw the [Install Guide](https://github.com/tfshivaji/deeplearning/blob/master/I
 
 ### Apache Zepplin Notebook
 
-In this section we take a humble approach and show you how you can leverage data to use the power of DeepLearning on data stored in QDS. 
-
-
-This code base works with Qubole Data Service Platform. The modules are built on Zepplin Notebook which can be imported into your QDS environment.
+In this section we take a humble approach and show you how you can leverage data to use the power of DeepLearning on Hadoop using Zepplin Notebook
 
 
 ### A quick Intro to Deep Learning
@@ -49,8 +44,7 @@ The github repo provides details on the samples.
 	tensorflow/Tensorflow_Hello_World_Part2
 ```
 
-Notebooks - These are Zepplin Notebooks. You can directly import them by linking from Qubole Github link.
-The details on the documentation for QDS and Zepplin can be found here - [QDS Zepplin](http://docs.qubole.com/en/latest/user-guide/features/notebook/link-notebook-github.html)
+Notebooks - These are Zepplin Notebooks. 
 
 ### Support or Contact
 Please contact shivaji@aurius.io for the above work
